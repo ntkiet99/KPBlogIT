@@ -1,0 +1,6 @@
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\bin\Debug\KPBlogIT.Common.dll
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\bin\Debug\KPBlogIT.Common.pdb
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\obj\Debug\KPBlogIT.Common.csprojAssemblyReference.cache
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\obj\Debug\KPBlogIT.Common.csproj.CoreCompileInputs.cache
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\obj\Debug\KPBlogIT.Common.dll
+D:\Projects\ASP.NET MVC\KPBlogIT\2. Back-End\KPBlogIT\KPBlogIT.Common\obj\Debug\KPBlogIT.Common.pdb
