@@ -6,7 +6,7 @@ Nhóm thực hiện:
   2. Đoàn Ngọc Phối
 
 # HỆ THỐNG
-- Công nghệ sử dụng
+Công nghệ sử dụng
   1. ASP.NET MVC
   2. Entity Framework
   3. Bootstrap 4
