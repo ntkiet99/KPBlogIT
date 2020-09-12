@@ -230,3 +230,9 @@
     #testtext {
         height: 1000px;
     }
+
+    .main-content .container .row {
+        background-color: white;
+        margin-top:0px;
+        margin-left: 70px;
+    }
