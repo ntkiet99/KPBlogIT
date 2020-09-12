@@ -1,238 +1,309 @@
-    .header-top .container .row {
-        background: white;
-        height: 25px;
-    }
-    
-    .main-navbar .container .main-navbar_left {
-        width: 50%;
-        float: left;
-        padding-left: 50px;
-    }
-    
-    .main-navbar .container .main-navbar_right {
-        width: 50%;
-        float: left;
-        padding-right: 50px;
-    }
-    
-    .main-navbar_logo img {
-        height: 1.5em;
-    }
-    
-    .header-top {
-        height: 51px;
-        position: sticky;
-    }
-    
-    img {
-        height: 20px;
-        float: left;
-        margin-top: 18px;
-    }
-    
-    .main-menu {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0px;
-        margin-top: -15px;
-    }
-    
-    .main-menu li {
-        display: inline-block;
-        position: relative;
-    }
-    
-    .main-menu li a {
-        display: inline-block;
-        font-size: 12px;
-        color: gray;
-        margin-right: 50px;
-        line-height: 1;
-        padding: 17px 0;
-        position: relative;
-        margin-top: 10px;
-    }
-    
-    .main-menu li a:hover {
-        color: black;
-    }
-    
-    .form-control {
-        line-height: 0.5;
-        height: 34px;
-        width: 100%;
-        outline: none;
-        padding: 0.65rem calc(45px + 1.5rem) 0.65rem 1.5rem;
-        border-radius: 2px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(60, 116, 184);
-        border-image: initial;
-        font-size: 13px;
-        width: 287px;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -ms-border-radius: 2px;
-        -o-border-radius: 2px;
-    }
-    
-    .fa {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
-    
-    .btn-primary {
-        color: red;
-        background-color: #007bff;
-        border-color: #007bff;
-        margin-top: -20px;
-        height: 34px;
-        margin-left: -5px;
-    }
-    
-    .main-navbar_right .sb .sb_input {
-        margin-top: -20px;
-        font: 13px;
-    }
-    
-    .el-button--text {
-        color: rgb(119, 160, 209);
-        padding-left: 0px;
-        padding-right: 0px;
-        border-color: transparent;
-        background: transparent;
-        float: right;
-        font-size: 12px;
-        width: 136px;
-    }
-    
-    .flex-fill {
-        margin-top: 12px;
-    }
-    
-    .row .col-xl-6 .col-xl-8 {
-        width: 54.7%;
-    }
-    
-    .form-inline .form-control {
-        font-size: 12px;
-        margin-left: -70px;
-        width: 300px;
-    }
-    
-    .row .col-xl-6 .col-xl-4 .glyphicon-info-sign {
-        top: 12px;
-        margin-left: -14px;
-    }
-    
-    .row .col-xl-6 .col-xl-4 .el-button--text {
-        margin-left: 0px;
-        margin-top: 8px;
-    }
-    
-    .row .col-xl-6 .col-xl-4 .glyphicon-log-in {
-        top: 2px;
-        margin-left: -27px;
-    }
-    
-    .row .col-xl-6 .col-xl-4 span {
-        margin-left: 0px;
-        margin-bottom: -20px;
-    }
-    
-    .main-navbar {
-        height: 50px;
-        margin-top: 0px;
-        background-color: black;
-        float: left;
-        width: 100%;
-    }
-    
-    .main-navbar .main-menu li a {
-        margin-top: 16px;
-        color: white;
-        font-size: 11px;
-    }
-    
-    .container-fluid .col-xl-12 a {
-        color: white;
-        margin-left: 500px;
-        line-height: 50px;
-    }
-    
-    footer {
-        background-color: rgb(11, 26, 51);
-        height: 360px;
-    }
-    
-    .container-fluid {
-        margin-left: 0px;
-        margin-right: 0px;
-        background-color: rgb(11, 26, 51);
-    }
-    
-    hr {
-        margin-top: 6px;
-        margin-left: 82px;
-        margin-right: 129px;
-    }
-    
-    .container .row {
-        background-color: rgb(11, 26, 51);
-        margin-top: -10px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    
-    .container .row .col-md-4 .col-md-12 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .container .row .col-md-4 .col-md-12 a {
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .container .row .col-md-4 .col-md-6 p {
-        color: white;
-    }
-    
-    .container .row .col-md-4 .col-md-6 button {
-        color: white;
-        width: 142px;
-    }
-    
-    .container .row .col-md-4 .col-md-6 button a {
-        color: white;
-        float: left;
-    }
-    
-    .container .row .col-md-4 .col-md-6 button span {
-        float: left;
-        margin-left: 5px;
-    }
-    
-    .fixtop {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 50px;
-        background-color: #fff;
-        display: block;
-        z-index: 1000;
-    }
-    
-    #testtext {
-        height: 1000px;
-    }
-
-    .main-content .container .row {
-        background-color: white;
-        margin-top:0px;
-        margin-left: 70px;
-    }
+        .header-top .container .row {
+            background: white;
+            height: 25px;
+        }
+        
+        .main-navbar .container .main-navbar_left {
+            width: 50%;
+            float: left;
+            padding-left: 50px;
+        }
+        
+        .main-navbar .container .main-navbar_right {
+            width: 50%;
+            float: left;
+            padding-right: 50px;
+        }
+        
+        .main-navbar_logo img {
+            height: 1.5em;
+        }
+        
+        .header-top {
+            height: 51px;
+            position: sticky;
+        }
+        
+        img {
+            height: 20px;
+            float: left;
+            margin-top: 18px;
+        }
+        
+        .main-menu {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+            margin-top: -15px;
+        }
+        
+        .main-menu li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .main-menu li a {
+            display: inline-block;
+            font-size: 12px;
+            color: gray;
+            margin-right: 50px;
+            line-height: 1;
+            padding: 17px 0;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .main-menu li a:hover {
+            color: black;
+        }
+        
+        .form-control {
+            line-height: 0.5;
+            height: 34px;
+            width: 100%;
+            outline: none;
+            padding: 0.65rem calc(45px + 1.5rem) 0.65rem 1.5rem;
+            border-radius: 2px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(60, 116, 184);
+            border-image: initial;
+            font-size: 13px;
+            width: 287px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+        }
+        
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .btn-primary {
+            color: red;
+            background-color: #007bff;
+            border-color: #007bff;
+            margin-top: -20px;
+            height: 34px;
+            margin-left: -5px;
+        }
+        
+        .main-navbar_right .sb .sb_input {
+            margin-top: -20px;
+            font: 13px;
+        }
+        
+        .el-button--text {
+            color: rgb(119, 160, 209);
+            padding-left: 0px;
+            padding-right: 0px;
+            border-color: transparent;
+            background: transparent;
+            float: right;
+            font-size: 12px;
+            width: 136px;
+        }
+        
+        .flex-fill {
+            margin-top: 12px;
+        }
+        
+        .row .col-xl-6 .col-xl-8 {
+            width: 54.7%;
+        }
+        
+        .form-inline .form-control {
+            font-size: 12px;
+            margin-left: -70px;
+            width: 300px;
+        }
+        
+        .row .col-xl-6 .col-xl-4 .glyphicon-info-sign {
+            top: 12px;
+            margin-left: -14px;
+        }
+        
+        .row .col-xl-6 .col-xl-4 .el-button--text {
+            margin-left: 0px;
+            margin-top: 8px;
+        }
+        
+        .row .col-xl-6 .col-xl-4 .glyphicon-log-in {
+            top: 2px;
+            margin-left: -27px;
+        }
+        
+        .row .col-xl-6 .col-xl-4 span {
+            margin-left: 0px;
+            margin-bottom: -20px;
+        }
+        
+        .main-navbar {
+            height: 50px;
+            margin-top: 0px;
+            background-color: black;
+            float: left;
+            width: 100%;
+        }
+        
+        .main-navbar .main-menu li a {
+            margin-top: 16px;
+            color: white;
+            font-size: 11px;
+        }
+        
+        .container-fluid .col-xl-12 a {
+            color: white;
+            margin-left: 500px;
+            line-height: 50px;
+        }
+        
+        footer {
+            background-color: rgb(11, 26, 51);
+            height: 340px;
+        }
+        
+        .container-fluid {
+            margin-left: 0px;
+            margin-right: 0px;
+            background-color: rgb(11, 26, 51);
+        }
+        
+        .container hr {
+            margin-top: -46px;
+            margin-left: 31px;
+            margin-right: 78px;
+            margin-bottom: 13px;
+        }
+        
+        .container .row {
+            background-color: rgb(11, 26, 51);
+            margin-top: -10px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        
+        .container .row .col-md-4 .col-md-12 {
+            margin-top: 5px;
+            margin-bottom: 12px;
+        }
+        
+        .container .row .col-md-4 .col-md-12 a {
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .container .row .col-md-4 .col-md-6 p {
+            color: white;
+        }
+        
+        .container .row .col-md-4 .col-md-6 button {
+            color: white;
+            width: 142px;
+        }
+        
+        .container .row .col-md-4 .col-md-6 button a {
+            color: white;
+            float: left;
+        }
+        
+        .container .row .col-md-4 .col-md-6 button span {
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .container .row .col-md-4 .col-md-12 a {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        
+        .container .row .col-md-12 .col-md-6 .main-menu {
+            float: right;
+            margin-right: 30px;
+        }
+        
+        .container .row .col-md-12 .col-md-6 .main-menu li a {
+            margin-right: 32px;
+            margin-top: 67px;
+            padding: 0px;
+            color: white;
+            margin-right: 17px;
+        }
+        
+        .fixtop {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            display: block;
+            z-index: 1000;
+        }
+        
+        #testtext {
+            height: 1000px;
+        }
+        
+        .main-content .container .row {
+            background-color: white;
+            margin-top: 0px;
+            margin-left: 70px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .comment {
+            margin-top: 10px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .avatar img {
+            margin-top: 3px;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .author {
+            color: blue;
+            margin-right: 5px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .author:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .date {
+            margin-right: 5px;
+            color: grey;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .fa {
+            color: grey;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .text {
+            font-size: 18px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .text:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .actions span {
+            margin-right: 15px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .comment hr {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 6px;
+            margin-left: 31px;
+            margin-right: 78px;
+            margin-bottom: 13px;
+        }
