@@ -199,8 +199,13 @@
             margin-bottom: 20px;
         }
         
-        .container .row .col-md-4 .col-md-6 p {
+        .container .row .col-md-4 .col-md-6 p a {
             color: white;
+            font-size: 13px;
+        }
+        
+        .container .row .col-md-4 .col-md-6 p a:hover {
+            text-decoration: none;
         }
         
         .container .row .col-md-4 .col-md-6 button {
@@ -219,7 +224,7 @@
         }
         
         .container .row .col-md-4 .col-md-12 a {
-            font-size: 18px;
+            font-size: 16px;
             margin-right: 10px;
         }
         
@@ -256,23 +261,43 @@
             margin-left: 70px;
         }
         
-        .main-content .container .row .col-xl-8 .ui .comment {
-            margin-top: 10px;
+        .main-content .container .row .col-xl-8 .ui {
+            margin-top: 20px;
         }
         
-        .main-content .container .row .col-xl-8 .ui .avatar img {
+        .main-content .container .row .col-xl-8 .ui .comment {
+            margin-top: 5px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .comment .avatar img {
             margin-top: 3px;
             width: 25px;
             height: 25px;
             margin-right: 5px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
         }
         
-        .main-content .container .row .col-xl-8 .ui .content .author {
+        .main-content .container .row .col-xl-8 .ui .comment .content .author {
             color: blue;
             margin-right: 5px;
+            font-size: 12px;
         }
         
-        .main-content .container .row .col-xl-8 .ui .content .author:hover {
+        .main-content .container .row .col-xl-8 .ui .comment .content .author:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .comment .content .text .title {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .comment .content .text .title:hover {
             color: #007bff;
             text-decoration: underline;
         }
@@ -280,6 +305,14 @@
         .main-content .container .row .col-xl-8 .ui .content .date {
             margin-right: 5px;
             color: grey;
+            font-size: 12px;
+        }
+        
+        .main-content .container .row .col-xl-8 .ui .content .time {
+            margin-right: 5px;
+            margin-left: 5px;
+            color: grey;
+            font-size: 12px;
         }
         
         .main-content .container .row .col-xl-8 .ui .content .fa {
@@ -287,23 +320,116 @@
         }
         
         .main-content .container .row .col-xl-8 .ui .content .text {
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .main-content .container .row .col-xl-8 .ui .content .text:hover {
             color: #007bff;
-            text-decoration: underline;
+            text-decoration: none;
         }
         
         .main-content .container .row .col-xl-8 .ui .content .actions span {
-            margin-right: 15px;
+            margin-left: 15px;
         }
         
         .main-content .container .row .col-xl-8 .ui .comment hr {
             margin-left: 0px;
             margin-right: 0px;
-            margin-top: 6px;
+            margin-top: -10px;
             margin-left: 31px;
-            margin-right: 78px;
-            margin-bottom: 13px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+        
+        .scrollbar {
+            margin-left: 5px;
+            float: left;
+            height: 600px;
+            width: 260px;
+            background: white;
+            overflow-y: scroll;
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+        
+        .force-overflow {
+            min-height: 450px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui {
+            margin-top: 10px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .title {
+            color: blue;
+            margin-right: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .title:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .text .title {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .text .title:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content hr {
+            margin-top: 5px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: -5px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .author {
+            color: gray;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .actions span {
+            margin-right: 15px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments {
+            margin-top: 15px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .avatar img {
+            margin-top: -5px;
+            height: 50px;
+            width: 50px;
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content {
+            margin-top: 15px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .avatar img {
+            margin-left: 5px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+        }
+        
+        .col-xl-4 .scrollbar .force-overflow .ui .comments .content .actions .btn {
+            margin-top: 2px;
+            margin-left: 0px;
+            height: 31px;
+            width: 61px;
+            width: 64px;
+            background-color: white;
+            color: #007bff;
         }
