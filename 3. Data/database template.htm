@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+		<meta charset="UTF-8">
+<!-- Use minimum-scale=1.0, maximum-scale=1.0, user-scalable=no for mobile applications -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="JEeif5r1UHsBUdCL6Zlv5yb4TdHj6q9UVAprXq-_VoQ" />
+<!--bing webmaster -->
+<meta name="msvalidate.01" content="CF73B11BE0476E1B226C5D86A63184E8" />
+<!-- yandex search engine -->
+<meta name="yandex-verification" content="4bd0f44ef63284ae" />
+<!--printrest -->
+<meta name="p:domain_verify" content="79749a5d3c657d0cada43c7a0c9007db"/>
+
+<meta name="description" content="The complete guide to designing a database schema in MySQL to manage the users and blog posts of a blogging platform." /><meta name="keywords" content="Tutorials24x7, MySQL, Blog, Database, Manage, User, Post" /><meta name="robots" content="index,follow" /><meta name="csrf-param" content="_csrf-t24x7-site">
+<meta name="csrf-token" content="PRFgJ_luiEzodmY0f2zMYWb9sc7RYxpLMGgpt-om8tgFczFdlTnvG9A-IHYcQZQWPIv1lOgvVAVJOWLiuWLKsQ==">
+
+<meta property="og:title" content="Guide To Design Database For Blog Management In MySQL" /><meta property="og:site_name" content="Tutorials24x7"/><meta property="og:url" content="https://mysql.tutorials24x7.com/blog/guide-to-design-a-database-for-blog-management-in-mysql" /><meta property="og:description" content="It provides a complete guide to designing a database schema in MySQL to manage the users and blog posts of a blogging platform. The database design can be used to further develop the blog website or mobile application."/><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="fb:app_id" content="541804105976425" /><meta property="og:image" content="https://mysql.tutorials24x7.com/uploads/2019-11-29/banner/t24x7-mysql-database-blog-banner.jpg"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="358"><meta property="og:image:type" content="2"><meta property="article:author" content="Tutorials24x7" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="24x7tutorials" /><meta name="twitter:creator" content="24x7tutorials" />
+<title>Guide To Design Database For Blog Management In MySQL | Tutorials24x7</title>
+
+<!-- IE fix for console -->
+<script type="text/javascript"> if ( !window.console ) console = { log: function() {} }; </script>
+
+<!-- App Icons -->
+<link href="https://mysql.tutorials24x7.com/images/icons/favicon.ico" rel="shortcut icon">
+<link href="https://mysql.tutorials24x7.com/images/icons/apple-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+
+<link href="/blog/fawbtblg-20191001.css" rel="stylesheet">
+<link href="/blog/cmnbtblg-20191001.css" rel="stylesheet">
+<link href="/blog/pubbtblg-20191005.css" rel="stylesheet">    </head>
+    <body id="scroll-top">
+    	        		<div id="pre-loader-main" class="pre-loader valign-center align align-center">
+			<div class="spinner cmti cmti-3x cmti-spinner-1 spin"></div>
+		</div>
+		<header id="header-main" class="header header-main header-basic header-basic-duo header-fixed shadow shadow-primary">
+	<div class="row">
+		<div class="header-logo">
+			<div class="logo">
+				<a href="/"><img src="https://mysql.tutorials24x7.com/images/logo.png"></a>			</div>
+			<div class="logo-small">
+				<a href="/"><img src="https://mysql.tutorials24x7.com/images/logo-small.png"></a>			</div>
+		</div>
+		<ul id="menu-main" class="nav uppercase"><li><a href="https://mysql.tutorials24x7.com/">Home</a></li>
+<li><a href="https://www.tutorials24x7.com/about-us" target="_blank">About Us</a></li>
+<li><a href="https://www.tutorials24x7.com/terms" target="_blank">Terms & Conditions</a></li>
+<li><a href="https://www.tutorials24x7.com/privacy" target="_blank">Privacy Policy</a></li>
+<li><a href="https://www.tutorials24x7.com/">Main Site</a></li></ul>		<div id="mobile-actions">
+			<span id="btn-menu-mobile" class="mobile-action">
+				<i class="cmti cmti-menu"></i>
+			</span>
+		</div>
+	</div>
+	<div id="menu-mobile-wrap" class="relative">
+		<ul id="menu-main-mobile" class="vnav uppercase"><li><a href="https://mysql.tutorials24x7.com/">Home</a></li>
+<li><a href="https://www.tutorials24x7.com/about-us" target="_blank">About Us</a></li>
+<li><a href="https://www.tutorials24x7.com/terms" target="_blank">Terms & Conditions</a></li>
+<li><a href="https://www.tutorials24x7.com/privacy" target="_blank">Privacy Policy</a></li>
+<li><a href="https://www.tutorials24x7.com/">Main Site</a></li></ul>	</div>
+</header>
+        <div class="container container-main">
+	        <div class="content-wrap content-main-wrap">
+	        	<div class="content">
+	        		<style>.table-border {width: auto; border-collapse: collapse !important;}.table-border th, .table-border td{padding: 0.15em; border: 1px solid #3f3f46 !important;}@media only screen and (max-width: 1024px) { .table-border {width: 100%;} }</style>
+<div  class="page page-basic page-default page-model-blog page-guide-to-design-a-database-for-blog-management-in-mysql" data-slug="guide-to-design-a-database-for-blog-management-in-mysql" cmt-block="block-half-auto">
+	
+	<div class="page-content-wrap">
+								<div class="page-sidebar-wrap page-sidebar-wrap-top">
+					<div class="sidebar sidebar-basic sidebar-vertical obj-sidebar sidebar-vsidebar sidebar-post-top">
+
+
+<div class="sidebar-content-wrap">
+			<div class="sidebar-content ">
+										
+	<div class="sidebar-widget-wrap row">
+		<div class="widget widget-basic widget-default obj-widget widget-google-large-2">
+
+
+<div class="widget-content-wrap">
+			<div class="widget-content align align-center color color-primary margin margin-top-small">
+										
+
+	<div class="widget-content-raw"><ins class="adsbygoogle"
+      style="display:inline-block;min-width:200px;max-width:970px;width:100%;height:90px;background-color: #f4f6f8 !important;"
+      data-ad-client="ca-pub-9075166357650375"
+      data-ad-slot="2320791608"
+      data-full-width-responsive="true"></ins>
+ <script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+ </script></div>
+
+<!-- <div class="widget-content-buffer"></div> -->
+
+	</div>
+</div>
+</div>	</div>
+	</div>
+</div>
+</div>			</div>
+							<div class="page-content-row row max-cols-100">
+								<div class="colf colf-sidebar-filler colf12x9">
+						<div class="page-content ">
+					<div class="page-content-banner">
+				<img class="width width-100 " src="https://mysql.tutorials24x7.com/uploads/2019-11-29/banner/t24x7-mysql-database-blog-banner.jpg" title="Guide To Design Database For Blog Management In MySQL" alt="Guide To Design Database For Blog Management In MySQL"  />
+			</div>
+							<div class="page-content-title">Guide To Design Database For Blog Management In MySQL</div>
+															<div class="page-content-data reader"><p>This tutorial provides complete steps to design a database schema to manage the users, blog posts, post meta data, post comments, post categories, and post tags. It can be further used to develop a blogging website or mobile application.</p>
+<p></p>
+<p>The Entity Relationship Diagram or visual database design is shown below.</p>
+<p></p>
+<div class="wrap-editor-image"><img alt="Blog Database" title="Blog Database" src="https://www.tutorials24x7.com/uploads/2019-11-29/files/tutorials24x7-blog-database.png" class="fluid" />
+<p class="image-caption">Fig 1</p>
+</div>
+<p></p>
+<p><strong>Notes</strong>: To keep the database schema simple and to develop a minimal viable product, it does not cover the more advanced options like versioning and reviewing the posts. It provides options to review the comments by the post authors to avoid spamming so that only legitimate comments will be published and displayed on the Post Page.</p>
+<p></p>
+<p>You can also visit the popular tutorials including <a href="https://mysql.tutorials24x7.com/blog/how-to-install-mysql-8-on-ubuntu">How To Install MySQL 8 on Ubuntu</a>, <a href="https://mysql.tutorials24x7.com/blog/how-to-install-mysql-8-on-windows">How To Install MySQL 8 on Windows</a>, <a href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-rbac-in-mysql">RBAC Database in MySql</a>, <a href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-poll-in-mysql">Poll and Survey Database in MySql</a>, <a href="https://mysql.tutorials24x7.com/blog/learn-basic-sql-queries-using-mysql"> Learn Basic SQL Queries In MySQL</a>.</p>
+<p></p>
+<h3>Blog Database</h3>
+<p></p>
+<p>The very first step is to create the Blog Database. It can be created using the query as shown below.</p>
+<p></p>
+<pre>CREATE SCHEMA `blog` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</pre>
+<p></p>
+<p>I have used the character set <strong>utf8mb4</strong> to support a wide range of characters.</p>
+<p></p>
+<h3>User Table</h3>
+<p></p>
+<p>In this section, we will design the <strong>User Table</strong> to store user information of all the post authors. The same table can be used to relate the post authors so that all the authors can manage their own posts. Below mentioned is the description of all the columns of the User Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Id</td>
+<td>The unique id to identify the user.</td>
+</tr>
+<tr>
+<td class="bold">First Name</td>
+<td>The first name of the user.</td>
+</tr>
+<tr>
+<td class="bold">Middle Name</td>
+<td>The middle name of the user.</td>
+</tr>
+<tr>
+<td class="bold">Last Name</td>
+<td>The last name of the user.</td>
+</tr>
+<tr>
+<td class="bold">Mobile</td>
+<td>The mobile number of the user. It can be used for login and registration purposes.</td>
+</tr>
+<tr>
+<td class="bold">Email</td>
+<td>The email of the user. It can be used for login and registration purposes.</td>
+</tr>
+<tr>
+<td class="bold">Password Hash</td>
+<td>The password hash generated by the appropriate algorithm. We must avoid storing plain passwords.</td>
+</tr>
+<tr>
+<td class="bold">Registered At</td>
+<td>This column can be used to calculate the life of the user with the blog.</td>
+</tr>
+<tr>
+<td class="bold">Last Login</td>
+<td>It can be used to identify the last login of the user.</td>
+</tr>
+<tr>
+<td class="bold">Intro</td>
+<td>The brief introduction of the Author to be displayed on each post.</td>
+</tr>
+<tr>
+<td class="bold">Profile</td>
+<td>The author details to be displayed on the Author Page.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The User Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre>CREATE TABLE `blog`.`user` (<br />  `id` BIGINT NOT NULL AUTO_INCREMENT,<br />  `firstName` VARCHAR(50) NULL DEFAULT NULL,<br />  `middleName` VARCHAR(50) NULL DEFAULT NULL,<br />  `lastName` VARCHAR(50) NULL DEFAULT NULL,<br />  `mobile` VARCHAR(15) NULL,<br />  `email` VARCHAR(50) NULL,<br />  `passwordHash` VARCHAR(32) NOT NULL,<br />  `registeredAt` DATETIME NOT NULL,<br />  `lastLogin` DATETIME NULL DEFAULT NULL,<br />  `intro` TINYTEXT NULL DEFAULT NULL,<br />  `profile` TEXT NULL DEFAULT NULL,<br />  PRIMARY KEY (`id`),<br />  UNIQUE INDEX `uq_mobile` (`mobile` ASC),<br />  UNIQUE INDEX `uq_email` (`email` ASC) );</pre>
+<p></p>
+<h3>Post Table</h3>
+<p></p>
+<p>In this section, we will design the <strong>Post Table</strong> to store the post data. Below mentioned is the description of all the columns of the Post Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Id</td>
+<td>The unique id to identify the post.</td>
+</tr>
+<tr>
+<td class="bold">Author Id</td>
+<td>The author id to identify the post author.</td>
+</tr>
+<tr>
+<td class="bold">Parent Id</td>
+<td>The parent id to identify the parent post. It can be used to form the table of content of the parent post of series.</td>
+</tr>
+<tr>
+<td class="bold">Title</td>
+<td>The post title to be displayed on the Post Page and the lists.</td>
+</tr>
+<tr>
+<td class="bold">Meta Title</td>
+<td>The meta title to be used for browser title and SEO.</td>
+</tr>
+<tr>
+<td class="bold">Slug</td>
+<td>The post slug to form the URL.</td>
+</tr>
+<tr>
+<td class="bold">Summary</td>
+<td>The summary of the post to mention the key highlights.</td>
+</tr>
+<tr>
+<td class="bold">Published</td>
+<td>It can be used to identify whether the post is publicly available.</td>
+</tr>
+<tr>
+<td class="bold">Created At</td>
+<td>It stores the date and time at which the post is created.</td>
+</tr>
+<tr>
+<td class="bold">Updated At</td>
+<td>It stores the date and time at which the post is updated.</td>
+</tr>
+<tr>
+<td class="bold">Published At</td>
+<td>It stores the date and time at which the post is published.</td>
+</tr>
+<tr>
+<td class="bold">Content</td>
+<td>The column used to store the post data.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The Post Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre>CREATE TABLE `blog`.`post` (<br />  `id` BIGINT NOT NULL AUTO_INCREMENT,<br />  `authorId` BIGINT NOT NULL,<br />  `parentId` BIGINT NULL DEFAULT NULL,<br />  `title` VARCHAR(75) NOT NULL,<br />  `metaTitle` VARCHAR(100) NULL,<br />  `slug` VARCHAR(100) NOT NULL,<br />  `summary` TINYTEXT NULL,<br />  `published` TINYINT(1) NOT NULL DEFAULT 0,<br />  `createdAt` DATETIME NOT NULL,<br />  `updatedAt` DATETIME NULL DEFAULT NULL,<br />  `publishedAt` DATETIME NULL DEFAULT NULL,<br />  `content` TEXT NULL DEFAULT NULL,<br />  PRIMARY KEY (`id`),<br />  UNIQUE INDEX `uq_slug` (`slug` ASC),<br />  INDEX `idx_post_user` (`authorId` ASC),<br />  CONSTRAINT `fk_post_user`<br />    FOREIGN KEY (`authorId`)<br />    REFERENCES `blog`.`user` (`id`)<br />    ON DELETE NO ACTION<br />    ON UPDATE NO ACTION);<br /><br />ALTER TABLE `blog`.`post` <br />ADD INDEX `idx_post_parent` (`parentId` ASC);<br />ALTER TABLE `blog`.`post` <br />ADD CONSTRAINT `fk_post_parent`<br />  FOREIGN KEY (`parentId`)<br />  REFERENCES `blog`.`post` (`id`)<br />  ON DELETE NO ACTION<br />  ON UPDATE NO ACTION;</pre>
+<p></p>
+<h3>Post Meta</h3>
+<p></p>
+<p>The Post Meta Table can be used to store additional information of a post including the post banner URL etc. Below mentioned is the description of all the columns of the Post Meta Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Id</td>
+<td>The unique id to identify the post meta.</td>
+</tr>
+<tr>
+<td class="bold">Post Id</td>
+<td>The post id to identify the parent post.</td>
+</tr>
+<tr>
+<td class="bold">Key</td>
+<td>The key identifying the meta.</td>
+</tr>
+<tr>
+<td class="bold">Content</td>
+<td>The column used to store the post data.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The Post Meta Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre>CREATE TABLE `blog`.`post_meta` (<br />  `id` BIGINT NOT NULL AUTO_INCREMENT,<br />  `postId` BIGINT NOT NULL,<br />  `key` VARCHAR(50) NOT NULL,<br />  `content` TEXT NULL DEFAULT NULL,<br />  PRIMARY KEY (`id`),<br />  INDEX `idx_meta_post` (`postId` ASC),<br />  UNIQUE INDEX `uq_post_meta` (`postId` ASC, `key` ASC),<br />  CONSTRAINT `fk_meta_post`<br />    FOREIGN KEY (`postId`)<br />    REFERENCES `blog`.`post` (`id`)<br />    ON DELETE NO ACTION<br />    ON UPDATE NO ACTION)<br />ENGINE = InnoDB;</pre>
+<p></p>
+<h3>Post Comment Table</h3>
+<p></p>
+<p>In this section, we will design the <strong>Post Comment Table</strong> to store the post comments. Below mentioned is the description of all the columns of the Post Comment Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Id</td>
+<td>The unique id to identify the post comment.</td>
+</tr>
+<tr>
+<td class="bold">Post Id</td>
+<td>The post id to identify the parent post.</td>
+</tr>
+<tr>
+<td class="bold">Parent Id</td>
+<td>The parent id to identify the parent comment.</td>
+</tr>
+<tr>
+<td class="bold">Title</td>
+<td>The comment title.</td>
+</tr>
+<tr>
+<td class="bold">Published</td>
+<td>It can be used to identify whether the comment is publicly available.</td>
+</tr>
+<tr>
+<td class="bold">Created At</td>
+<td>It stores the date and time at which the comment is submitted.</td>
+</tr>
+<tr>
+<td class="bold">Published At</td>
+<td>It stores the date and time at which the comment is published.</td>
+</tr>
+<tr>
+<td class="bold">Content</td>
+<td>The column used to store the comment data.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The Post Comment Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre>CREATE TABLE `blog`.`post_comment` (<br />  `id` BIGINT NOT NULL AUTO_INCREMENT,<br />  `postId` BIGINT NOT NULL,<br />  `parentId` BIGINT NULL DEFAULT NULL,<br />  `title` VARCHAR(100) NOT NULL,<br />  `published` TINYINT(1) NOT NULL DEFAULT 0,<br />  `createdAt` DATETIME NOT NULL,<br />  `publishedAt` DATETIME NULL DEFAULT NULL,<br />  `content` TEXT NULL DEFAULT NULL,<br />  PRIMARY KEY (`id`),<br />  INDEX `idx_comment_post` (`postId` ASC),<br />  CONSTRAINT `fk_comment_post`<br />    FOREIGN KEY (`postId`)<br />    REFERENCES `blog`.`post` (`id`)<br />    ON DELETE NO ACTION<br />    ON UPDATE NO ACTION);<br /><br />ALTER TABLE `blog`.`post_comment` <br />ADD INDEX `idx_comment_parent` (`parentId` ASC);<br />ALTER TABLE `blog`.`post_comment` <br />ADD CONSTRAINT `fk_comment_parent`<br />  FOREIGN KEY (`parentId`)<br />  REFERENCES `blog`.`post_comment` (`id`)<br />  ON DELETE NO ACTION<br />  ON UPDATE NO ACTION;</pre>
+<p></p>
+<h3>Category Table and Post Category Table</h3>
+<p></p>
+<p>In this section, we will design the <strong>Category Table</strong> and <strong>Post Category Table</strong> to store the post categories and their mappings. Below mentioned is the description of all the columns of the Category Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Id</td>
+<td>The unique id to identify the category.</td>
+</tr>
+<tr>
+<td class="bold">Parent Id</td>
+<td>The parent id to identify the parent category.</td>
+</tr>
+<tr>
+<td class="bold">Title</td>
+<td>The category title.</td>
+</tr>
+<tr>
+<td class="bold">Meta Title</td>
+<td>The meta title to be used for browser title and SEO.</td>
+</tr>
+<tr>
+<td class="bold">Slug</td>
+<td>The category slug to form the URL.</td>
+</tr>
+<tr>
+<td class="bold">Content</td>
+<td>The column used to store the category data.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The Category Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre>CREATE TABLE `blog`.`category` (<br />  `id` BIGINT NOT NULL AUTO_INCREMENT,<br />  `parentId` BIGINT NULL DEFAULT NULL,<br />  `title` VARCHAR(75) NOT NULL,<br />  `metaTitle` VARCHAR(100) NULL DEFAULT NULL,<br />  `slug` VARCHAR(100) NOT NULL,<br />  `content` TEXT NULL DEFAULT NULL,<br />  PRIMARY KEY (`id`));<br /><br />ALTER TABLE `blog`.`category` <br />ADD INDEX `idx_category_parent` (`parentId` ASC);<br />ALTER TABLE `blog`.`category` <br />ADD CONSTRAINT `fk_category_parent`<br />  FOREIGN KEY (`parentId`)<br />  REFERENCES `blog`.`category` (`id`)<br />  ON DELETE NO ACTION<br />  ON UPDATE NO ACTION;</pre>
+<p></p>
+<p>Below mentioned is the description of all the columns of the Post Category Table.</p>
+<p></p>
+<table class="table table-border">
+<tbody>
+<tr>
+<td class="bold">Post Id</td>
+<td>The post id to identify the post.</td>
+</tr>
+<tr>
+<td class="bold">Category Id</td>
+<td>The category id to identify the category.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>The Post Category Table with the appropriate constraints is as shown below.</p>
+<p></p>
+<pre></pre>
+<pre>CREATE TABLE `blog`.`post_category` (<br />  `postId` BIGINT NOT NULL,<br />  `categoryId` BIGINT NOT NULL,<br />  PRIMARY KEY (`postId`, `categoryId`),<br />  INDEX `idx_pc_category` (`categoryId` ASC),<br />  INDEX `idx_pc_post` (`postId` ASC),<br />  CONSTRAINT `fk_pc_post`<br />    FOREIGN KEY (`postId`)<br />    REFERENCES `blog`.`post` (`id`)<br />    ON DELETE NO ACTION<br />    ON UPDATE NO ACTION,<br />  CONSTRAINT `fk_pc_category`<br />    FOREIGN KEY (`categoryId`)<br />    REFERENCES `blog`.`category` (`id`)<br />    ON DELETE NO ACTION<br />    ON UPDATE NO ACTION);</pre>
+<p></p>
+<h3>Tag Table and Post Tag Table</h3>
+<p></p>
+<p>Similar to the category and post category tables, we can design the <strong>Tag Table</strong> and <strong>Post Tag Table</strong>. The major differences between the Category and Tag are listed below.</p>
+<p></p>
+<ul>
+<li>The parentId column is not required in the Tag Table.</li>
+<li>The count of categories remains low since these can be used to form the Main Menu for navigational purposes. The tags can be more as compared to categories.</li>
+<li>Both categories and tags can be used to relate the posts.</li>
+<li>One should assign only a few categories to a post whereas tags count can be more.</li>
+</ul>
+<p></p>
+<h3>Summary</h3>
+<p></p>
+<p>This is how we can design a Blog Database to be used as the formation of Blog based websites and mobile applications. The same can be further enhanced to add more advanced options including videos, payments, subscriptions, etc.</p>
+<p></p>
+<p>You may submit your comments to join the discussion. You may also be interested in designing the database of <a title="Guide To Design Database For Blog Management In MySQL" href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-poll-in-mysql">Poll &amp; Survey</a> applications. The <a href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-rbac-in-mysql">RBAC</a> design can be used for Role-Based Access Control implementation.</p>
+<p></p>
+<p>The complete database schema is also available on <a title="Blog Database" href="https://github.com/tutorials24x7/blog-database-mysql" target="_blank">GitHub</a>.</p></div>
+								<!-- <div class="page-content-buffer"></div> -->
+			</div>
+						<div class="page-content-buffer page-content-comments">
+		<div class="comment-submit">	<div class="h4">Write a Comment</div><hr/>
+	<div class="filler-height"></div>
+<form class="form" cmt-app="core" cmt-controller="comment" cmt-action="create" action="cms/post/submit-comment?slug=guide-to-design-a-database-for-blog-management-in-mysql&type=blog">
+	<div class="spinner max-area-cover">
+		<div class="valign-center cmti cmti-2x cmti-spinner-1 spin"></div>
+	</div>
+	<div class="row max-cols-100">
+			<div class="colf colf15x7">
+			<div class="clear">
+								<input type="text" name="Comment[name]" placeholder="Name" />
+				<span class="error" cmt-error="Comment[name]"></span>
+			</div>
+			<div class="clear">
+								<input type="text" name="Comment[email]" placeholder="Email" />
+				<span class="error" cmt-error="Comment[email]"></span>
+			</div>
+			<div class="clear">
+								<input type="text" name="Comment[websiteUrl]" placeholder="Website Link">
+				<span class="error" cmt-error="Comment[websiteUrl]"></span>
+			</div>
+					</div>
+		<div class="colf colf15"></div>
+		<div class="colf colf15x7">
+			<div class="clear">
+								<textarea name="Comment[content]" rows="4" placeholder="Write here..."></textarea>
+				<span class="error" cmt-error="Comment[content]"></span>
+			</div>
+							<div class="clear captcha">
+					<img id="w0-image" src="/site/captcha?v=5f903d43642620.21511568" alt=""> <input type="text" id="w0" name="Comment[captcha]" placeholder="Captcha Key*">					<div class="info margin margin-small-v">Click on the captcha image to get new code.</div>
+					<span class="error" cmt-error="Comment[captcha]"></span>
+				</div>
+					</div>
+		</div>
+	<div class="align align-right">
+		<input type="submit" class="frm-element-medium" value="Submit">
+	</div>
+	<div class="margin margin-small-v">
+		<div class="message success"></div>
+		<div class="message warning"></div>
+		<div class="message error"></div>
+	</div>
+</form>
+</div>			</div>
+	<div class="page-content-buffer page-content-disqus">
+		<div class="h4">Discussion Forum by DISQUS</div><hr/>
+		<div class="filler-height"></div>
+		<div id="disqus_thread" class="margin margin-small-v"></div>
+	</div>
+				</div>
+									<div class="colf colf12x3">
+							<div class="page-sidebar-wrap page-sidebar-wrap-right">
+		<div class="sidebar sidebar-basic sidebar-vertical obj-sidebar sidebar-vsidebar sidebar-post-right">
+
+
+<div class="sidebar-content-wrap">
+			<div class="sidebar-content ">
+										
+	<div class="sidebar-widget-wrap row">
+		<div class="widget widget-basic widget-default obj-widget widget-google-small-1">
+
+
+<div class="widget-content-wrap">
+			<div class="widget-content ">
+										
+
+	<div class="widget-content-raw"><ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9075166357650375"
+      data-ad-slot="6184770847"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+ <script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+ </script></div>
+
+<!-- <div class="widget-content-buffer"></div> -->
+
+	</div>
+</div>
+</div><div class="widget widget-basic widget-card widget-card-model widget-card-post widget-card-recent obj-widget widget-post-card widget-recent-site-posts">
+
+<div class="widget-content-wrap">
+		<div class="widget-header-wrap">
+		<div class="widget-header">
+													<div class="widget-header-title">Recent Posts</div>
+					</div>
+	</div>
+		<div class="widget-content ">
+										
+<!-- <div class="widget-content-buffer"></div> -->
+
+<div class="widget-content-buffer">
+			<div  class="card-model-wrap">
+			<div class="card card-default card-model card-post"><div class="card-content-wrap">
+	<div class="card-header">
+		<div class="card-header-title">
+			<a href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-calendar-event-and-reminder-in-mysql">Guide To Design Database For Calendar Event And Reminder In MySQL</a>
+		</div>
+	</div>
+</div>
+</div><div class="card card-default card-model card-post"><div class="card-content-wrap">
+	<div class="card-header">
+		<div class="card-header-title">
+			<a href="https://mysql.tutorials24x7.com/blog/guide-to-design-database-for-newsletter-in-mysql">Guide To Design Database For Newsletter In MySQL</a>
+		</div>
+	</div>
+</div>
+</div><div class="card card-default card-model card-post"><div class="card-content-wrap">
+	<div class="card-header">
+		<div class="card-header-title">
+			<a href="https://mysql.tutorials24x7.com/blog/remotely-access-mysql-server-over-ssh-tunnel">Remotely Access MySQL Server Over SSH Tunnel</a>
+		</div>
+	</div>
+</div>
+</div><div class="card card-default card-model card-post"><div class="card-content-wrap">
+	<div class="card-header">
+		<div class="card-header-title">
+			<a href="https://mysql.tutorials24x7.com/blog/using-workbench-to-connect-to-remote-mysql-server-over-ssh-tunnel">Using Workbench To Connect To Remote MySQL Server Over SSH Tunnel</a>
+		</div>
+	</div>
+</div>
+</div><div class="card card-default card-model card-post"><div class="card-content-wrap">
+	<div class="card-header">
+		<div class="card-header-title">
+			<a href="https://mysql.tutorials24x7.com/blog/how-to-install-mysql-8-on-ubuntu-20-04-lts">How To Install MySQL 8 on Ubuntu 20.04 LTS</a>
+		</div>
+	</div>
+</div>
+</div>		</div>
+					</div>
+
+	</div>
+</div>
+</div><div class="widget fixme obj-widget widget-default widget-google-small-2">
+
+
+<div class="widget-content-wrap">
+			<div class="widget-content ">
+										
+
+	<div class="widget-content-raw"><ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9075166357650375"
+      data-ad-slot="6359567647"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+ <script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+ </script></div>
+
+<!-- <div class="widget-content-buffer"></div> -->
+
+	</div>
+</div>
+<script>
+	window.onload = function(){
+var fixmeTop = jQuery('.fixme').offset().top;
+
+jQuery(window).scroll(function() {
+    var currentScroll = jQuery(window).scrollTop();
+    if (currentScroll >= fixmeTop) {
+        jQuery('.fixme').css({
+            position: 'fixed',
+              top: '120px'
+        });
+    } else {
+        jQuery('.fixme').css({
+            position: 'static'
+        });
+    }
+});
+}</script>
+</div>	</div>
+	</div>
+</div>
+</div>	</div>
+					</div>
+							</div>
+							</div>
+</div>
+	        	</div>
+	        </div>
+        </div>
+        <footer class="footer footer-basic footer-main">
+	<div class="footer-content row row-xlarge max-cols-100 col-filler-wrap">
+		<div class="colf colf12x8">
+			<div class="row max-cols-50">
+				<div class="footer-col col col12x6">
+					<div class="h5 col-header">Links</div>
+					<ul id="menu-links" class="nav"><li><a href="https://mysql.tutorials24x7.com/blog/search">Blog</a></li>
+<li><a href="https://www.tutorials24x7.com/contact-us" target="_blank">Contact Us</a></li>
+<li><a href="https://www.tutorials24x7.com/feedback" target="_blank">Feedback</a></li>
+<li><a href="https://www.tutorials24x7.com/testimonial" target="_blank">Testimonial</a></li></ul>				</div>
+				<div class="footer-col col col12x6">
+					<div class="h5 col-header">Featured Posts</div>
+					<div class="widget widget-page"><div class="blog-post">
+<div class="bkg-element-small" title="How To Install Ubuntu 20.04 LTS On Windows Using VMware Workstation Player">
+	<a href="https://mysql.tutorials24x7.com/blog/how-to-install-ubuntu-20-04-lts-on-windows-using-vmware-workstation-player" class="blog-post">
+		<img src="https://mysql.tutorials24x7.com/uploads/2020-05-27/banner/tutorials24x7-install-ubuntu-on-windows-vmware-banner-medium.jpg" />
+	</a>
+</div>
+</div><div class="blog-post">
+<div class="bkg-element-small" title="How To Make Bootable USB Of Ubuntu 20.04 LTS On Ubuntu">
+	<a href="https://mysql.tutorials24x7.com/blog/how-to-make-bootable-usb-of-ubuntu-20-04-lts-on-ubuntu" class="blog-post">
+		<img src="https://mysql.tutorials24x7.com/uploads/2020-05-23/banner/tutorials24x7-bootable-usb-ubuntu-banner-medium.jpg" />
+	</a>
+</div>
+</div><div class="blog-post">
+<div class="bkg-element-small" title="How To Install IntelliJ IDEA for Java on Windows">
+	<a href="https://mysql.tutorials24x7.com/blog/how-to-install-intellij-idea-for-java-on-windows" class="blog-post">
+		<img src="https://mysql.tutorials24x7.com/uploads/2020-06-20/banner/tutorials24x7-install-intellij-idead-for-java-on-windows-10-banner-medium.jpg" />
+	</a>
+</div>
+</div><div class="blog-post">
+<div class="bkg-element-small" title="How To Install VSCode For Java On Windows">
+	<a href="https://mysql.tutorials24x7.com/blog/how-to-install-visual-studio-code-for-java-on-windows" class="blog-post">
+		<img src="https://mysql.tutorials24x7.com/uploads/2020-06-20/banner/tutorials24x7-install-visual-studio-code-vscode-for-java-on-windows-banner-medium.jpg" />
+	</a>
+</div>
+</div><div class="blog-post">
+<div class="bkg-element-small" title="How To Install OpenJDK 12 On Windows">
+	<a href="https://mysql.tutorials24x7.com/blog/how-to-install-openjdk-12-on-windows" class="blog-post">
+		<img src="https://mysql.tutorials24x7.com/uploads/2020-06-20/banner/tutorials24x7-install-openjdk-12-windows-10-banner-medium.jpg" />
+	</a>
+</div>
+</div></div>				</div>
+			</div>
+		</div>
+		<div class="footer-col col col12x4">
+			<div class="h5 col-header">Newsletter</div>
+			<div>Sign Up to receive updates from us.</div>
+			<div class="footer-newsletter-wrap"><form class="form row max-cols-100" cmt-app="core" cmt-controller="default" cmt-action="default" action="newsletter/site/sign-up">
+	<div class="max-area-cover spinner">
+		<div class="valign-center cmti cmti-2x cmti-spinner-1 spin"></div>
+	</div>
+	<div class="frm-actions">
+		<input type="text" name="SignUpForm[email]" placeholder="Newsletter Email *">
+		<input class="submit" type="submit" name="submit" value="Join Us">
+	</div>
+    <div class="frm-field">
+		<span class="error" cmt-error="SignUpForm[email]"></span>
+    </div>
+	<div class="message success"></div>
+	<div class="message warning"></div>
+	<div class="message error"></div>
+</form>
+</div>		</div>
+	</div>
+</footer>
+<footer class="footer footer-copyright">
+	<div class="row row-xlarge padding padding-small-v align align-center">
+		Copyright © 2017 - 2020 Tutorials24x7. All Rights Reserved.
+	</div>
+</footer>
+
+<!-- Google Ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81806638-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-81806638-1');
+  setTimeout("ga('send','event','adjusted bounce rate','25 seconds')",25000);
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1407078042794911');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1407078042794911&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+  fbq('track', 'ViewContent');
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.vcdevhub.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+		<script>
+
+var disqus_config = function () {
+	this.page.url = 'https://mysql.tutorials24x7.com/blog/guide-to-design-a-database-for-blog-management-in-mysql?amp=0';
+	this.page.identifier = 'guide-to-design-a-database-for-blog-management-in-mysql'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorials24x7.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <script src="/assets/6eaeee5/jquery.min.js"></script>
+<script src="/assets/4f30870f/yii.js"></script>
+<script src="/assets/4f30870f/yii.captcha.js"></script>
+<script src="/blog/lzybtblg-20191001.js"></script>
+<script src="/blog/cmnbtblg-20191001.js"></script>
+<script src="/blog/pubbtblg-20191001.js"></script>
+<script>var siteUrl	= 'https://mysql.tutorials24x7.com/';
+					var ajaxUrl	= 'https://mysql.tutorials24x7.com/apix/';
+					var uploadUrl = 'https://www.tutorials24x7.com/uploads/';
+					var fileUploadUrl = 'https://mysql.tutorials24x7.com/apix/file/file-handler';</script>
+<script>jQuery(function ($) {
+jQuery('#w0-image').yiiCaptcha({"refreshUrl":"\/site\/captcha?refresh=1","hashKey":"yiiCaptcha\/core\/site\/captcha"});
+});</script>    </body>
+</html>

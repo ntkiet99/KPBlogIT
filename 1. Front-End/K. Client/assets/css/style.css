@@ -19,9 +19,15 @@ body{
     margin: 0 auto;
 }
 
+
 a{
     text-decoration: none !important;
     cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+    font-size: 14px;
 }
 
 .header{
@@ -104,7 +110,7 @@ a{
     font-size: 16px;
     background-color: rgba(255,255,255,0.05);
 }
-/*  */
+
 .header .header__inner .header__right{
     display: flex;
     align-items: center;
@@ -142,8 +148,14 @@ a{
 }
 
 .header .header__inner .header__right .header__avatarcontainer{
+    padding: 10px 10px;
+    line-height: 20px;
 }
-
+.header .header__inner .header__right .header__avatarcontainer:hover{
+    background-color: #383A3D;
+    line-height: 20px;
+    cursor: pointer;
+}
 .header .header__inner .header__right .header__avatarcontainer .header__avatarwrp{
     width: 36px;
     height: 36px;
@@ -156,3 +168,124 @@ a{
     width: 100%;
     height: 100%;
 }
+
+.header .header__inner .header__right .header__avatarcontainer .header__navitem--account{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #FFFFFF;
+    width: 160px;
+    color: #2d2f33;
+    box-shadow: 0 2px 4px rgba(63, 62, 62, 0.16), 0 2px 4px rgba(190, 185, 185, 0.23);
+    margin: 0;
+    padding: 4px 0px;
+    color: rgb(173, 169, 169);
+}
+
+.header .header__inner .header__right .header__avatarcontainer .header__navitem--account li{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 14px !important;
+}
+.header .header__inner .header__right .header__avatarcontainer .header__navitem--account li:hover{
+    color: #ffffff;
+    background-color: #ddc930;
+    
+}
+.header .header__inner .header__right .header__avatarcontainer .header__navitem--account li:hover a{
+    color: #ffffff;
+    background-color: #ddc930;
+    
+}
+.header .header__inner .header__right .header__avatarcontainer .header__navitem--account li a{
+    color: #474745;
+    
+}
+
+.header .header__inner .header__right .header__lang{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100px;
+    padding: 20px 20px;
+    line-height: 20px;
+}
+
+.header .header__inner .header__right .header__lang:hover{
+    background-color: #383A3D;
+    cursor: pointer;
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__menu{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #FFFFFF;
+    width: 140px;
+    color: #2d2f33;
+    box-shadow: 0 2px 4px rgba(63, 62, 62, 0.16), 0 2px 4px rgba(190, 185, 185, 0.23);
+   
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__menu ul{
+    margin: 0;
+    padding: 10px 0px;
+    color: rgb(173, 169, 169);
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__menu ul li{
+    margin: 0;
+    padding: 6px 20px;
+    font-size: 14px !important;
+}
+.header .header__inner .header__right .header__lang .f9t-select__menu ul li a{
+   
+    color: #8b8a87;
+
+}
+.header .header__inner .header__right .header__lang .f9t-select__menu ul li:hover {
+    background-color: #383A3D;
+    color: #cabf67 ;
+
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__menu ul li:hover a{
+    color: #cabf67 ;
+ 
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__menu .select__active a{
+    color: #ddc930;
+}
+
+.header .header__inner .header__right .f9t-select__active .icon-pcdown{
+    transition: all 0.2s ease-out ;
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transition: all 0.2s ease-out ;
+    -moz-transition: all 0.2s ease-out ;
+    -ms-transition: all 0.2s ease-out ;
+    -o-transition: all 0.2s ease-out ;
+}
+.header .header__inner .header__right .icon-pcdown{
+    transition: all 0.5s ease-out ;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transition: all 0.5s ease-out ;
+    -moz-transition: all 0.5s ease-out ;
+    -ms-transition: all 0.5s ease-out ;
+    -o-transition: all 0.5s ease-out ;
+}
+
+.header .header__inner .header__right .header__lang .f9t-select__icon{
+    color: #E9E9EA;
+}
+

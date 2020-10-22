@@ -33,14 +33,42 @@
                             <input type="text">
                             <i class="fas fa-search"></i>
                         </form>
-                        <div class="header__avatarcontainer">
+                        <div class="header__notifycontainer">
+
+                        </div>
+                        <div class="header__avatarcontainer" style="z-index: 100;">
                             <div class="header__avatarwrp">
                                 <div class="header__avatar">
-                                    <img src="assets/img/avatarDefaultPc.png" alt="avatar default pc">
+                                    <img class="header__avatar--img" src="assets/img/avatarDefaultPc.png" alt="avatar default pc">
                                 </div>
                             </div>
+                            <ul class="header__navitem--show header__navitem--account card card-2">
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Thông tin</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Website</a>
+                                </li>
+                                <li style="border-top: 1px solid rgba(109, 107, 107, 0.3); ">
+                                    <a style="color: rgba(85, 85, 85, 0.5);" href="javascript:void(0)" class="header__navmore header__logout">Đăng xuất</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="f9t-select header__lang"></div>
+                        <div class="f9t-select header__lang" style="z-index: 100;">
+                            <!-- <input type="text" name="" id="select__dummy" id="" style="opacity: 0; position: absolute;"> -->
+                            <span class="f9t-select__label">
+                                <i class="fas fa-globe-europe"></i>
+                            </span>
+                            <span class="f9t-select__label">VN</span>
+                            <i class="fas fa-chevron-down f9t-select__icon icon-pcdown"></i>
+                          <!-- Multi Languages -->
+                          <div class="f9t-select__menu card card-2">
+                              <ul>
+                                  <li class="select__active"> <a href="javascript:void(0)">Việt Nam</a> </li>
+                                  <li> <a href="javascript:void(0)"> English </a></li>
+                              </ul>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
