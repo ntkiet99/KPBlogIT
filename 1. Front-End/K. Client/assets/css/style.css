@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: "Microsoft YaHei","微软雅黑",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.root{
+    width: 100%;
+}
+
+.f9t-layout{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.header{
+    line-height: 52px;
+    background-color: #2d2f33;
+    width: 100%;
+    position: fixed;
+    color: white;
+}
+
+.header .header__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__inner .header__main{
+    display: flex;
+}
+
+.header .header__inner .header__main .header__logo {
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header .header__inner .header__main .header__logo img {
+    width: 90px;
+}
+
+.header .header__inner .header__main .header__title {
+    display: inline-flex;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+    width: 160px;
+    align-items: center;
+}
+
+.header .header__inner .header__main .header__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    height: 15px;
+    border-left: 1px solid rgba(246, 246, 246, 0.4);
+
+}
+
+.header .header__inner .header__main .header__navwrap{
+    display: flex;
+}
+
+.header .header__inner .header__main .header__navwrap .header__nav{
+    line-height: 20px;
+    display: flex;
+}
+
+.header .header__inner .header__main .header__navwrap .header__nav .header__navitem{
+    padding: 20px 20px;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+}
+
+.header .header__inner .header__main .header__navwrap .header__nav .header__navitem:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.header .header__inner .header__main .header__navwrap .header__nav .header__navitemactive {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.05);
+}
+/*  */
+.header .header__inner .header__right{
+    display: flex;
+    align-items: center;
+}
+
+.header .header__inner .header__right .header__search{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0 20px 0 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+.header .header__inner .header__right .header__search input:focus{
+    width: 100px;
+}
+
+.header .header__inner .header__right .header__search input{
+    width: 50px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: width 300 ease;
+    -webkit-transition: width 300ms ease;
+    -moz-transition: width 300 ease;
+    -ms-transition: width 300 ease;
+    -o-transition: width 300 ease;
+}
+
+.header .header__inner .header__right .header__avatarcontainer{
+}
+
+.header .header__inner .header__right .header__avatarcontainer .header__avatarwrp{
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+.header .header__inner .header__right .header__avatarcontainer .header__avatarwrp .header__avatar{
+  
+}
+.header .header__inner .header__right .header__avatarcontainer .header__avatarwrp .header__avatar img{
+    width: 100%;
+    height: 100%;
+}
