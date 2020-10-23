@@ -52,7 +52,7 @@
                                     </ul>
                                 </div>
                                 <div class="header__notifylist" >
-                                    <div class="header__notify--loding" style="display: none;">
+                                    <div class="header__notify--loding" style="display: block;">
                                         <div class="loader"></div>
                                     </div>
                                     <div class="header-notification">
@@ -62,7 +62,7 @@
                                             <p class="no-data__text">Chưa có ai thích nội dung của bạn!</p>
                                         </div> -->
 
-                                        <div class="header-notification__item">
+                                        <div class="header-notification__item pointer">
                                             <div class="avatar avatar__sm">
                                                 <img class="avatar__img" src="assets/img/avatarDefaultPc.png" alt="avatar__img">
                                             </div>
@@ -78,7 +78,7 @@
                                             <div class="header-notification__time">Vừa rồi</div>
                                         </div> 
                                         
-                                        <div class="header-notification__item">
+                                        <div class="header-notification__item pointer">
                                             <div class="avatar avatar__sm">
                                                 <img class="avatar__img" src="assets/img/avatarDefaultPc.png" alt="avatar__img">
                                             </div>
@@ -156,6 +156,13 @@
     <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
     <script src="vendors/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function () {
+                $('.header__notify--loding').fadeOut(300);
+            }, 2000);
+        });
+    </script>
 </body>
 
 </html>
