@@ -164,9 +164,11 @@ li{
     height: 36px;
     line-height: 36px;
 }
+
 .header .header__inner .header__right .header__avatarcontainer .header__avatarwrp .header__avatar{
   
 }
+
 .header .header__inner .header__right .header__avatarcontainer .header__avatarwrp .header__avatar img{
     width: 100%;
     height: 100%;
@@ -180,7 +182,6 @@ li{
     background-color: #FFFFFF;
     width: 160px;
     color: #2d2f33;
-    /* box-shadow: 0 2px 4px rgba(63, 62, 62, 0.16), 0 2px 4px rgba(190, 185, 185, 0.23); */
     margin: 0;
     padding: 4px 0px;
     color: rgb(173, 169, 169);
@@ -191,6 +192,7 @@ li{
     padding: 10px 20px;
     font-size: 14px !important;
 }
+
 .header .header__inner .header__right .header__avatarcontainer .header__navitem--account li:hover{
     color: #ffffff;
     background-color: #ddc930;
@@ -202,8 +204,7 @@ li{
     
 }
 .header .header__inner .header__right .header__avatarcontainer .header__navitem--account li a{
-    color: #474745;
-    
+    color: #474745;  
 }
 
 .header .header__inner .header__right .header__lang{
@@ -360,11 +361,11 @@ li{
 }
 
 .header .header__inner .header__right .header__notifycontainer .header__notifylist{
-    padding: 0 24px;
-    height: 344px;
+    /* padding: 0 24px; */
+    height: 330px;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-top: 10px
+    position: relative;
 }
 
 .header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification{
@@ -384,6 +385,13 @@ li{
 .header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item{
     display: flex;
     align-items: center;
+    padding: 0px 14px;
+    padding-top: 4px;
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item:hover{
+    background-color: rgba(143, 142, 142, 0.1);
 }
 
 .header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .avatar{
@@ -424,7 +432,21 @@ li{
 
 .header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__title{
     color: #666;
+    display: inline-block;
 }
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__subtitle{
+    display: inline-block; 
+    font-size: 12px; 
+    color: #ccc; 
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
 .header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__title .account-title{
     display: inline-block;
@@ -456,3 +478,34 @@ li{
     color: #4ea4dc;
     cursor: pointer;
 }
+
+/* 
+
+loading
+
+*/
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute; top: 140px; left: 140px;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }   
+
+  .header__notify--loding{
+    z-index: 99999; position: absolute;background-color: rgb(255, 255, 255); overflow-y: hidden; width: 100%; height: 100%;
+  }
