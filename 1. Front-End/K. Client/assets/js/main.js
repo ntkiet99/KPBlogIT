@@ -5,45 +5,69 @@
             $(this).addClass('header__navitemactive');
         });
 
-        let select_active = 'f9t-select__active';
-        window.addEventListener('mouseup', function (event) {
-            var pol = $(event.target).hasClass('header__lang');
-            var pol2 = $(event.target).hasClass('fa-globe-europe');
-            var pol3 = $(event.target).hasClass('f9t-select__label');
-            var pol4 = $(event.target).hasClass('f9t-select__icon');
-
-            if (pol || pol2 || pol3 || pol4) {
-                if ($('.header__lang').hasClass('f9t-select__active')) {
-                    $('.header__lang').removeClass(select_active);
-                    $('.f9t-select__menu').hide(200);
-                } else {
-                    $('.header__lang').addClass('f9t-select__active');
-                    $('.f9t-select__menu').show(200);
-                }
-            } else {
-                $('.header__lang').removeClass(select_active);
-                $('.f9t-select__menu').hide(200);
+        // Header lang
+        $('.header__lang').click(function(){
+            if( $(this).hasClass('f9t-select__active')){
+                $(this).removeClass('f9t-select__active');
+                $('.f9t-select__menu').fadeOut(200);
+            }else{
+                $(this).addClass('f9t-select__active');
+                $('.f9t-select__menu').fadeIn(200);
             }
         });
 
-        window.addEventListener('mouseup', function (event) {
-            var pol = $(event.target).hasClass('header__avatarcontainer');
-            var pol2 = $(event.target).hasClass('header__avatarwrp');
-            var pol3 = $(event.target).hasClass('header__avatar');
-            var pol4 = $(event.target).hasClass('header__avatar--img');
+        $(document).mouseup(function (e) {
+            var container = $(".header__lang");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.header__lang').removeClass('f9t-select__active');
+                $('.f9t-select__menu').fadeOut(200);
+            }
+        });
 
-            if (pol || pol2 || pol3 || pol4) {
-                if ($('.header__avatarcontainer').hasClass('header__navitem--show')) {
-                    $('.header__avatarcontainer').removeClass('header__navitem--show');
-                    $('.header__navitem--account').fadeOut(100);
-                } else {
-                    $('.header__avatarcontainer').addClass('header__navitem--show');
-                    $('.header__navitem--account').fadeIn(100);
-                }
-            } else {
-                $('.header__avatarcontainer').removeClass(select_active);
-                $('.header__navitem--account').fadeOut(100);
+        // header avatarcontainer
+        $('.header__avatarcontainer').click(function(){
+            if( $(this).hasClass('header__navitem--show')){
+                $(this).removeClass('header__navitem--show');
+                $('.header__navitem--account').fadeOut(200);
+            }else{
+                $(this).addClass('header__navitem--show');
+                $('.header__navitem--account').fadeIn(200);
+            }
+        });
+
+        $(document).mouseup(function (e) {
+            var container = $(".header__avatarcontainer");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.header__avatarcontainer').removeClass('header__navitem--show');
+                $('.header__navitem--account').fadeOut(200);
+            }
+        });
+
+        // 
+        $('.tab__item').click(function (event) {
+            $('.tab__item').removeClass('tab__item--active');
+            $(this).addClass('tab__item--active');
+        });
+
+        // header notifycontainer
+        $(document).mouseup(function (e) {
+            var container = $(".header__notifycontainer");
+
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.header__notifycontainer').removeClass('header__notification--show');
+                $('.header__notification--show').fadeOut(200);
+            }
+        });
+
+        $('.header__notify').click(function(){
+            if( $('.header__notifycontainer').hasClass('header__notification--show')){
+                $('.header__notifycontainer').removeClass('header__notification--show');
+                $('.header__notification--show').fadeOut(200);
+            }else{
+                $('.header__notifycontainer').addClass('header__notification--show');
+                $('.header__notification--show').fadeIn(200);
             }
         });
     });
+
 })(jQuery);

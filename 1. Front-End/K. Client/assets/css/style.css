@@ -10,6 +10,16 @@ body{
     font-size: 14px;
 }
 
+a{
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+    font-size: 14px;
+}
+
 .root{
     width: 100%;
 }
@@ -19,15 +29,8 @@ body{
     margin: 0 auto;
 }
 
-
-a{
-    text-decoration: none !important;
-    cursor: pointer;
-}
-
-li{
-    list-style-type: none;
-    font-size: 14px;
+.header__shadow--custom{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .header{
@@ -148,7 +151,7 @@ li{
 }
 
 .header .header__inner .header__right .header__avatarcontainer{
-    padding: 10px 10px;
+    padding: 12px 10px;
     line-height: 20px;
 }
 .header .header__inner .header__right .header__avatarcontainer:hover{
@@ -177,7 +180,7 @@ li{
     background-color: #FFFFFF;
     width: 160px;
     color: #2d2f33;
-    box-shadow: 0 2px 4px rgba(63, 62, 62, 0.16), 0 2px 4px rgba(190, 185, 185, 0.23);
+    /* box-shadow: 0 2px 4px rgba(63, 62, 62, 0.16), 0 2px 4px rgba(190, 185, 185, 0.23); */
     margin: 0;
     padding: 4px 0px;
     color: rgb(173, 169, 169);
@@ -194,7 +197,7 @@ li{
     
 }
 .header .header__inner .header__right .header__avatarcontainer .header__navitem--account li:hover a{
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #ddc930;
     
 }
@@ -289,3 +292,167 @@ li{
     color: #E9E9EA;
 }
 
+
+/* Message */
+.header .header__inner .header__right .header__notifycontainer{
+    position: relative;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notify{
+    padding: 4px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+   height: 100%;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notify:hover{
+    background-color: #383A3D;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show{
+    position: absolute;
+    top: 60px;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 4px 0;
+    width: 320px;
+    right: 0;
+    color: #474745;
+
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show .f9t-tab{
+    border-bottom: 1px solid rgba(73, 72, 68, 0.2);
+    padding: 0px 20px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show .f9t-tab .tab__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show .f9t-tab .tab__list .tab__item{
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 2px;
+    cursor: pointer;
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show .f9t-tab .tab__list .tab__item--active{
+    color: #dcbc60;
+    position: relative;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notification--show .f9t-tab .tab__list .tab__item--active::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #dcbc60;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist{
+    padding: 0 24px;
+    height: 344px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification{
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .no-data{
+    padding-top: 30px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .no-data img{
+    width: 200px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item{
+    display: flex;
+    align-items: center;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .avatar{
+    width: 36px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .avatar .avatar__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__time{
+    color: #ccc;
+    font-size: 12px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__content{
+    margin-left: 10px;
+    -webkit-box-flex: 1;
+    flex: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    line-height: 18px;
+    text-align: left;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__content .header-notification__text{
+    color: black;
+    font-size: 12px;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__title{
+    color: #666;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__title .account-title{
+    display: inline-block;
+    /* font-size: 0; */
+    line-height: 20px;
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifylist .header-notification .header-notification__item .header-notification__title .account-title .account-title__name{
+    color: #666;
+
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifyfooter{
+    line-height: 50px;
+    color: #dcbc60;
+    font-size: 14px;
+    padding: 0 20px;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifyfooter span{
+    cursor: pointer;
+}
+
+.header .header__inner .header__right .header__notifycontainer .header__notifyfooter a{
+    color: #4ea4dc;
+    cursor: pointer;
+}
