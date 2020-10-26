@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon 9 Team - F9Team</title>
+    <link rel="stylesheet" href="vendors/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector:'textarea',
+            width : "100%",  
+            height: "500px",
+            entity_encoding: "raw",
+            menubar:false,
+           
+            relative_urls: false,
+            inline_styles: true, image_advtab: true,
+            branding: false,
+           
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table contextmenu paste code colorpicker textcolor ','wordcount'
+            ],
+            toolbar: 'link  image| alignleft aligncenter alignright alignjustify | styleselect | bold italic | forecolor | backcolor  | bullist numlist outdent indent  '
+           
+        });
+
+    </script>
+    <style>
+    </style>
+</head>
+<style></style>
+
+<body>
+    <div id="__layout">
+        <div class="root">
+            <div class="header">
+                <div class="f9t-layout header__inner">
+                    <div class="header__main">
+                        <div class="header__logo">
+                            <img src="assets/img/logo.png" alt="This is logo for Falcon 9 Team" />
+                        </div>
+                        <div class="header__title">F9Team · Forum</div>
+                        <div class="header__navwrap">
+                            <div class="header__nav">
+                                <a href="#" class="header__navitem header__navitemactive">Trang chủ</a>
+                                <a href="#" class="header__navitem">F9Team</a>
+                                <a href="#" class="header__navitem">Bài viết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <form class="header__search" action="">
+                            <input type="text" />
+                            <i class="fas fa-search"></i>
+                        </form>
+                        <div class="header__notifycontainer">
+                            <div class="header__notify">Thông báo</div>
+                            <div class="header__notification--show header__shadow--custom header__notification--active"
+                                style="display: none">
+                                <div class="f9t-tab">
+                                    <ul class="tab__list">
+                                        <li class="tab__item tab__item--active">
+                                            <span class="tab__label"> Tin nhắn</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Hệ thống</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Thích</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Theo dõi</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__notifylist">
+                                    <div class="header__notify--loding" style="display: block">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <div class="header-notification">
+                                        <!-- <div class="no-data no-data-lg">
+                                            <img src="/assets/img/3dfa90b.png" alt="image no data"
+                                                class="no-data__image">
+                                            <p class="no-data__text">Chưa có ai thích nội dung của bạn!</p>
+                                        </div> -->
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__notifyfooter">
+                                    <span>Đánh dấu tất cả đã đọc</span>
+                                    <a href="javascript:void(0)" target="_blank">Xem tất cả></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__avatarcontainer" style="z-index: 100">
+                            <div class="header__avatarwrp">
+                                <div class="header__avatar">
+                                    <img class="header__avatar--img" src="assets/img/avatarDefaultPc.png"
+                                        alt="avatar default pc" />
+                                </div>
+                            </div>
+                            <ul class="header__navitem--show header__navitem--account header__shadow--custom">
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Thông tin</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Website</a>
+                                </li>
+                                <li style="border-top: 1px solid rgba(109, 107, 107, 0.3)">
+                                    <a style="color: rgba(85, 85, 85, 0.5)" href="javascript:void(0)"
+                                        class="header__navmore header__logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="f9t-select header__lang">
+                            <span class="f9t-select__label">
+                                <i class="fas fa-globe-europe"></i>
+                            </span>
+                            <span class="f9t-select__label">VN</span>
+                            <i class="fas fa-chevron-down f9t-select__icon icon-pcdown"></i>
+                            <!-- Multi Languages -->
+                            <div class="f9t-select__menu header__shadow--custom">
+                                <ul>
+                                    <li class="select__active">
+                                        <a href="javascript:void(0)">Việt Nam</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"> English </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="root-page-container">
+                <div class="main-page">
+                    <div class="home">
+                        <div class="layout new-article">
+                            <div class="new-article__container">
+                                <div class="new-article__content">
+                                    <div class="new-article__header">Bài viết mới</div>
+                                    <div class="new-article__editor">
+                                        <div class="form-item-container">
+                                            <span class="form-item-container__label">Tiêu đề:</span>
+                                            <div class="form-item-container__title--text">
+                                                <div class="input__container">
+                                                    <input id="title-text" type="text" auto-height
+                                                        placeholder="Tiêu đề (Tối đa 100 ký tự)" name="" >
+                                                    <span class="count-tip">0/100</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item-container" >
+                                            <span class="form-item-container__label">Nội dung:</span>
+                                            <div class="form-item-container__title--text" style="height: auto;">
+                                                <div class="input__container" >
+                                                    <textarea  ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item-container" style="align-items: center">
+                                            <span class="form-item-container__label">Thêm chủ đề:</span>
+                                            <div class="topic-selector-container" >
+                                                <div class="topic-label-selector">
+                                                    <div class="topic-label-selector__item topic-label-selector__editable">
+                                                        <a href="javascript:void(0)" class="topic-label-selector__link" target="_blank">
+                                                            <span>Games games nè</span>
+                                                        </a>
+                                                        <i  class="fas fa-times topic-label-selector__remove"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="topic-label-selector">
+                                                    <div class="topic-label-selector__item topic-label-selector__editable">
+                                                        <a href="javascript:void(0)" class="topic-label-selector__link" target="_blank">
+                                                            <span>Games games nè</span>
+                                                        </a>
+                                                        <i  class="fas fa-times topic-label-selector__remove"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="topic-label-selector">
+                                                    <div class="topic-label-selector__item topic-label-selector__add">
+                                                        Thêm chủ đề
+                                                        <i class="fas fa-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                            <div class="modal fade article-topic-sheet"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document" >
+                                                    <div class="modal-content" style="width: 1000px !important">
+                                                        <div class="modal-header">
+                                                        <h5 class="modal-title action-sheet__header" id="exampleModalLongTitle">Thêm chủ đề</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        </div>
+                                                        <div class="modal-body action-sheet__body">
+                                                            <div class="new-article-topic">
+                                                                <div class="new-article-topic-search">
+                                                                    <form action="" class="new-article-search__form">
+                                                                        <input type="text" class="new-article-topic-search__input">
+                                                                        <div class="new-article-topic-search__submit">
+                                                                            <button type="submit" class="button__button">Tìm kiếm</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="new-article-topic__listwrp">
+                                                                    <div class="new-article-topic__list">
+                                                                        <div class="new-article-topic__card topic-card">
+                                                                            <div to="/topicDetail/5" target="_blank" class="topic-card__link">
+                                                                                <div class="topic-card__cover">
+                                                                                    <img src="/assets/img/banner/topic.jpeg" alt="">
+                                                                                    <div class="new-article-topic__disable-text">
+                                                                                        <i style="line-height: 20px;" class="fas fa-ban"></i>
+                                                                                        <p >Đã chọn</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="topic-card__info">
+                                                                                <div class="topic-card__link">
+                                                                                    <p class="topic-card__name">Fan Art</p>
+                                                                                </div>
+                                                                                <p class="topic-card__desc">Lots of well-known content creators here!</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="new-article-topic__card topic-card">
+                                                                            <div to="/topicDetail/5" target="_blank" class="topic-card__link">
+                                                                                <div class="topic-card__cover">
+                                                                                    <img src="/assets/img/banner/topic.jpeg" alt="">
+                                                                                    <div class="new-article-topic__disable-text">
+                                                                                        <i style="line-height: 20px;" class="fas fa-ban"></i>
+                                                                                        <p >Đã chọn</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="topic-card__info">
+                                                                                <div class="topic-card__link">
+                                                                                    <p class="topic-card__name">Fan Art</p>
+                                                                                </div>
+                                                                                <p class="topic-card__desc">Lots of well-known content creators here!</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="new-article-topic__card topic-card">
+                                                                            <div to="/topicDetail/5" target="_blank" class="topic-card__link">
+                                                                                <div class="topic-card__cover">
+                                                                                    <img src="/assets/img/banner/topic.jpeg" alt="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="topic-card__info">
+                                                                                <div class="topic-card__link">
+                                                                                    <p class="topic-card__name">Fan Art</p>
+                                                                                </div>
+                                                                                <p class="topic-card__desc">Lots of well-known content creators here!</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="new-article-topic__bottom">
+                                                            <div class="button-loadmore">
+                                                                <div class="button__button">Xem thêm</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="new-article__footer">
+                                    <div class="new-article__submit">
+                                        <button class="button_button">Đăng bài</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer f9t-layout ">
+                <div class="layout footer__inner">
+                    <div class="footer__body">
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Giới thiệu</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Kteam Anime</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Content Writer</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">
+                            <p>
+                                Copyright © 2020-2021 F9Team All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rocket" class="rocket ">
+                <div class="rocket__rocket ">
+
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/silder3d/js/Carousel.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

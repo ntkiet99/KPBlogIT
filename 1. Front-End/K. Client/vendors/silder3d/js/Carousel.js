@@ -217,7 +217,7 @@
             position: 'absolute',
             left: 10,
             top: '45%',
-            'z-index': 9 + $container.data('totalNum') + 1
+            'z-index': 999 + $container.data('totalNum') + 1
         });
 
         $container.find('.right').css({
