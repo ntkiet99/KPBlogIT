@@ -95,13 +95,30 @@
             showTime: 3000,
         });
 
-
+        // author fixed
+        // window.onscroll = function () { fixedAuthorToTop() };
+        function fixedAuthorToTop(){
+            console.log('run');
+            var author_fixed = document.getElementById("article-page-author--fixed");
+            // debugger;
+            var fixed =author_fixed.offsetTop - 40;
+            if(window.pageYOffset >= fixed){
+                if (author_fixed != null)
+                    author_fixed.classList.add("article-page-author--fixed");
+            }else{
+                if (author_fixed != null)
+                    author_fixed.classList.remove("article-page-author--fixed");
+            }
+            
+        }
         // fixtop home-list
-        window.onscroll = function () { fixedHomeListToTop() };
+        window.onscroll = function () { fixedHomeListToTop(),fixedAuthorToTop()  };
+
 
         var header = document.getElementById("home__list__header--box");
         var header_right = document.getElementById("home__list__header-right");
         var rocket = document.getElementById("rocket");
+       
         if (header != null)
             var sticky = header.offsetTop - 80;
 
@@ -113,6 +130,7 @@
                     header_right.classList.add("home__list__header-right--show");
                 if (rocket != null)
                     rocket.classList.add("rocket--visible");
+               
             } else {
                 if (header != null)
                     header.classList.remove("home__list__header--box--fixed");
@@ -120,6 +138,7 @@
                     header_right.classList.remove("home__list__header-right--show");
                 if (rocket != null)
                     rocket.classList.remove("rocket--visible");
+                    
             }
         }
         $(".rocket").click(function () {
@@ -213,6 +232,26 @@
             if ($(".form-item-container__img").length <= 6) {
                 $('.form-item-container__add').css('display', 'block');
             }
+        });
+
+        $(document).on('click','.header__logo', function(){
+            var url = '/';
+            $(location).attr('href', url);
+        });
+
+        $(document).on('click','#button_newpost', function(){
+            var url = '/newArticle.html';
+            $(location).attr('href', url);
+        });
+
+        $(document).on('click','#button_newquestion', function(){
+            var url = '/newArticleImage.html';
+            $(location).attr('href', url);
+        });
+
+        $(document).on('click','.article-card', function(){
+            var url = '/detailPost.html';
+            $(location).attr('href', url);
         });
     });
 

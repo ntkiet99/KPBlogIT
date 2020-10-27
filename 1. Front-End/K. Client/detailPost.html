@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon 9 Team - F9Team</title>
+    <link rel="stylesheet" href="vendors/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            width: "100%",
+            height: "200px",
+            entity_encoding: "raw",
+            menubar: false,
+
+            relative_urls: false,
+            inline_styles: true, image_advtab: true,
+            branding: false,
+
+            plugins: [
+                'image',
+                'wordcount'
+            ],
+            toolbar: 'image'
+
+        });
+
+    </script>
+</head>
+<style></style>
+
+<body>
+    <div id="__layout">
+        <div class="root">
+            <div class="header" id="header">
+                <div class="f9t-layout header__inner">
+                    <div class="header__main">
+                        <div class="header__logo">
+                            <img src="assets/img/logo.png" alt="This is logo for Falcon 9 Team" />
+                        </div>
+                        <div class="header__title">F9Team · Forum</div>
+                        <div class="header__navwrap">
+                            <div class="header__nav">
+                                <a href="#" class="header__navitem header__navitemactive">Trang chủ</a>
+                                <a href="#" class="header__navitem">F9Team</a>
+                                <a href="#" class="header__navitem">Bài viết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <form class="header__search" action="">
+                            <input type="text" />
+                            <i class="fas fa-search"></i>
+                        </form>
+                        <div class="header__notifycontainer">
+                            <div class="header__notify">Thông báo</div>
+                            <div class="header__notification--show header__shadow--custom header__notification--active"
+                                style="display: none">
+                                <div class="f9t-tab">
+                                    <ul class="tab__list">
+                                        <li class="tab__item tab__item--active">
+                                            <span class="tab__label"> Tin nhắn</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Hệ thống</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Thích</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Theo dõi</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__notifylist">
+                                    <div class="header__notify--loding" style="display: block">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <div class="header-notification">
+                                        <!-- <div class="no-data no-data-lg">
+                                            <img src="/assets/img/3dfa90b.png" alt="image no data"
+                                                class="no-data__image">
+                                            <p class="no-data__text">Chưa có ai thích nội dung của bạn!</p>
+                                        </div> -->
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__notifyfooter">
+                                    <span>Đánh dấu tất cả đã đọc</span>
+                                    <a href="javascript:void(0)" target="_blank">Xem tất cả></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__avatarcontainer" style="z-index: 100">
+                            <div class="header__avatarwrp">
+                                <div class="header__avatar">
+                                    <img class="header__avatar--img" src="assets/img/avatarDefaultPc.png"
+                                        alt="avatar default pc" />
+                                </div>
+                            </div>
+                            <ul class="header__navitem--show header__navitem--account header__shadow--custom">
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Thông tin</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Website</a>
+                                </li>
+                                <li style="border-top: 1px solid rgba(109, 107, 107, 0.3)">
+                                    <a style="color: rgba(85, 85, 85, 0.5)" href="javascript:void(0)"
+                                        class="header__navmore header__logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="f9t-select header__lang">
+                            <span class="f9t-select__label">
+                                <i class="fas fa-globe-europe"></i>
+                            </span>
+                            <span class="f9t-select__label">VN</span>
+                            <i class="fas fa-chevron-down f9t-select__icon icon-pcdown"></i>
+                            <!-- Multi Languages -->
+                            <div class="f9t-select__menu header__shadow--custom">
+                                <ul>
+                                    <li class="select__active">
+                                        <a href="javascript:void(0)">Việt Nam</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"> English </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="root-page-container">
+                <div class="main-page">
+                    <div class="home">
+                        <div class="layout">
+                            <div class="layout__main">
+                                <div class="article-page__main">
+                                    <div class="article-page__header">
+                                        <div class="article-page__title">
+                                            <h1>[Megathread] 1.1 Developers Discussion</h1>
+                                        </div>
+                                        <div class="article-page-info">
+                                            <div class="article-page-info__from">
+                                                <span>Nhóm: </span>
+                                                <a href="javascript:void(0)" class="article-page-info__from-name"
+                                                    target="_blank">F9Team</a>
+                                            </div>
+                                            <div class="article-page-info__count">
+                                                <div class="article-page-info__count-item">
+                                                    <i class="far fa-eye"></i>
+                                                    <span title="9962">9,662</span>
+                                                </div>
+                                                <div class="article-page-info__count-item clickable">
+                                                    <i class="far fa-comment-dots"></i>
+                                                    <span title="662">662</span>
+                                                </div>
+                                                <div class="article-page-info__count-item">
+                                                    <i class="far fa-thumbs-up"></i>
+                                                    <span title="6662">6,662</span>
+                                                </div>
+                                                <div class="article-page-info__count-item">
+                                                    <i class="far fa-star"></i>
+                                                    <span title="6662">6,662</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="article-page-updatetime">
+                                            <span>Đã đăng: 10-23 </span>
+                                            <span>Lần chỉnh cuối: 3 giờ trước</span>
+                                        </div>
+                                    </div>
+                                    <div class="article-page__content">
+                                        <div class="img-text-article ql-snow">
+                                            <div class="img-text-article__content ql-editor">
+                                                <p>Since the flood has already started, the megathread on this topic is
+                                                    going up in order to consolidate discussion. </p>
+                                                <p><br></p>
+                                                <p>Feel free to discuss but keep the discussion civil. It should be
+                                                    remembered that the miHoYo community rules have been and will
+                                                    continue to be in full effect. Offenders will be punished and should
+                                                    discussion get out of hand, the thread will be cleared and remade as
+                                                    necessary.</p>
+                                                <p><br></p>
+                                                <p>I will check this thread personally and forward any reasonably
+                                                    thought out and well-supported suggestions to staff. I also highly
+                                                    encourage you to join the discord server, as staff looks through
+                                                    there daily for the same to send to the developers. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article-page__footer">
+                                        <div class="article-page-user-data">
+                                            <div class="article-page-user-data__item">
+                                                <i class="far fa-thumbs-up"></i>
+                                                <span>57</span>
+
+                                            </div>
+                                            <div class="article-page-user-data__item">
+                                                <i class="far fa-star"></i>
+                                                <span>57</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="reply" class="article-page-reply">
+                                    <div class="article-page-reply-action">
+                                        <div class="article-page-reply-action__tip">Đọc đã tốt, bình luận càng hay</div>
+                                        <div class="reply-box">
+                                            <div class="reply-box__body">
+                                                <div class="form-item-container__title--text" style="height: auto;">
+                                                    <div class="input__container">
+                                                        <textarea></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reply-box__footer">
+                                                <div class="reply-box__submit">
+                                                    <button class="button__button">Gửi</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article-page-reply-list">
+                                        <div class="article-page-reply-list__header">
+                                            <div class="reply-filter__tab">
+                                                <ul class="tab__list">
+                                                    <li class="tab__item tab__item--active">
+                                                        <span class="tab__label">Tất cả bình luận</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="article-page-reply-list__body">
+                                            <div class="reply-card">
+                                                <div class="reply-card-left">
+                                                    <a href="javascript:void(0)" class="reply-card__link"
+                                                        target="_blank">
+                                                        <div class="card__avatar">
+                                                            <img src="assets/img/avatarDefaultPc.png" alt=""
+                                                                class="avatar__img">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="reply-card__container">
+                                                    <div class="reply-card__header">
+                                                        <a href="javascript:void(0)"
+                                                            class="account-title reply-card__nickname" target="_blank">
+                                                            <span class="account-title__name">NguyenKiet</span>
+                                                            <img src="assets/img/level/level7.png" alt="level account"
+                                                                class="account-title__level">
+                                                        </a>
+                                                        <p class="reply-card__floor">
+                                                            53F
+                                                        </p>
+                                                    </div>
+                                                    <div class="reply-card__content">
+                                                        <pre><p>Please rework your Resin system. It's just has really bad design at its core to even be viable in this sort of game. Make it at least 200 and add some sort of free daily regen since 120 is VERY restricting especially after AR35 where there's nothing left to do (after getting 95% of the chests already+ all the anemoculus/geomoculus) except do dailies, kill trash mobs on the field, pick plants and mine rocks.</p></pre>
+                                                    </div>
+                                                    <div class="reply-card-operation-bottom">
+                                                        <span class="reply-card__time">10-10</span>
+                                                        <div class="reply-card-operation-bottom__right">
+                                                            <div class="reply-card-operation-bottom__item">Trả lời</div>
+                                                            <div class="heart-click">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                                <span>213</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reply-card__replies">
+                                                        <div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply__detail">Xem thêm bình luận></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reply-card">
+                                                <div class="reply-card-left">
+                                                    <a href="javascript:void(0)" class="reply-card__link"
+                                                        target="_blank">
+                                                        <div class="card__avatar">
+                                                            <img src="assets/img/avatarDefaultPc.png" alt=""
+                                                                class="avatar__img">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="reply-card__container">
+                                                    <div class="reply-card__header">
+                                                        <a href="javascript:void(0)"
+                                                            class="account-title reply-card__nickname" target="_blank">
+                                                            <span class="account-title__name">NguyenKiet</span>
+                                                            <img src="assets/img/level/level7.png" alt="level account"
+                                                                class="account-title__level">
+                                                        </a>
+                                                        <p class="reply-card__floor">
+                                                            53F
+                                                        </p>
+                                                    </div>
+                                                    <div class="reply-card__content">
+                                                        <pre><p>Please rework your Resin system. It's just has really bad design at its core to even be viable in this sort of game. Make it at least 200 and add some sort of free daily regen since 120 is VERY restricting especially after AR35 where there's nothing left to do (after getting 95% of the chests already+ all the anemoculus/geomoculus) except do dailies, kill trash mobs on the field, pick plants and mine rocks.</p></pre>
+                                                    </div>
+                                                    <div class="reply-card-operation-bottom">
+                                                        <span class="reply-card__time">10-10</span>
+                                                        <div class="reply-card-operation-bottom__right">
+                                                            <div class="reply-card-operation-bottom__item">Trả lời</div>
+                                                            <div class="heart-click">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                                <span>213</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reply-card__replies">
+                                                        <div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply">
+                                                                <div class="reply-card-inner-reply__header">
+                                                                    <div class="reply-card-inner-reply__name">
+                                                                        <div class="avatar__xs">
+                                                                            <img src="assets/img/avatarDefaultPc.png"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="account-title">
+                                                                            <span
+                                                                                class="account-title__name">NguyenKiet</span></a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <pre class="reply-card-inner-reply__content">Absolute true facts. I feel 140 at a refresh of 5 mins would be nice. I'm AR 36 and my content for the game ends in like less than an hour with 2-3 refreshes. It's only been a week of course and I'm not asking for more story content fast, just a better resin gameplay loop to do rewarding content.
+                                                                </pre>
+                                                                <div class="reply-card-inner-reply__bottom">
+                                                                    <div class="reply-card-inner-reply-operation">
+                                                                        <div
+                                                                            class="reply-card-inner-reply-operation__item">
+                                                                            Trả lời</div>
+                                                                        <div class="heart-click">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                            <span>213</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reply-card-inner-reply__detail">Xem thêm bình luận></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout__sub">
+                              <div class="article-page-author " id="article-page-author--fixed">
+                                  <a href="javascript:void(0)" target="_blank">
+                                    <div class="user-card__avatar avatar__xl">
+                                        <img src="assets/img/avatar.png" alt="avatar" class="avatar__img">
+                                    </div>
+                                  </a>
+                                  <div class="user-card__info">
+                                      <a href="javascript:void(0)" target="_blank" class="account-title user-card__link">
+                                          <span class="account-title__name">NguyenKiet</span>
+                                          <img src="assets/img/level/level7.png" alt="level" class="account-title__level">
+                                      </a>
+                                      <div class="user-card__follow">
+                                          <span>Theo dõi</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="side-section">
+                                <div class="side-section__header">
+                                    <h2 class="side-section__title">Bài viết mới</h2>
+                                    <div class="side-section__link">
+                                        <a href="javascript:void(0)" class="side-section__link" target="_blank">Xem
+                                            thêm</a>
+                                    </div>
+                                </div>
+                                <div class="side-section__body">
+                                    <div class="topic-list">
+
+                                        <div class="topic-card topic-card__list" style="margin-top: 0;">
+                                            <a href="javascript:void(0)" class="topic-card__link" target="_blank" style="width: 40px;">
+                                                <div class="topic-card__cover" style="display: flex; align-items: center;">
+                                                    <img style="width: auto; height: 20px;" src="assets/img/hostpost.png" alt="topic default img">
+                                                </div>
+                                            </a>
+                                            <div class="topic-card__info">
+                                                <a href="javascript:void(0)" class="topic-card__link" target="_blank">Game News Game News  Game News</a>
+                                            </div>
+                                        </div>
+                                        <div class="topic-card topic-card__list" style="margin-top: 0;">
+                                            <a href="javascript:void(0)" class="topic-card__link" target="_blank" style="width: 40px;">
+                                                <div class="topic-card__cover" style="display: flex; align-items: center;">
+                                                    <img style="width: auto; height: 20px;" src="assets/img/hostpost.png" alt="topic default img">
+                                                </div>
+                                            </a>
+                                            <div class="topic-card__info">
+                                                <a href="javascript:void(0)" class="topic-card__link" target="_blank">Game News Game News  Game News</a>
+                                            </div>
+                                        </div>
+                                        <div class="topic-card topic-card__list" style="margin-top: 0;">
+                                            <a href="javascript:void(0)" class="topic-card__link" target="_blank" style="width: 40px;">
+                                                <div class="topic-card__cover" style="display: flex; align-items: center;">
+                                                    <img style="width: auto; height: 20px;" src="assets/img/hostpost.png" alt="topic default img">
+                                                </div>
+                                            </a>
+                                            <div class="topic-card__info">
+                                                <a href="javascript:void(0)" class="topic-card__link" target="_blank">Game News Game News  Game News</a>
+                                            </div>
+                                        </div>
+                                        <div class="topic-card topic-card__list" style="margin-top: 0;">
+                                            <a href="javascript:void(0)" class="topic-card__link" target="_blank" style="width: 40px;">
+                                                <div class="topic-card__cover" style="display: flex; align-items: center;">
+                                                    <img style="width: auto; height: 20px;" src="assets/img/hostpost.png" alt="topic default img">
+                                                </div>
+                                            </a>
+                                            <div class="topic-card__info">
+                                                <a href="javascript:void(0)" class="topic-card__link" target="_blank">Game News Game News  Game News</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="article-actions">
+                                <div class="article-actions__item">
+                                    <i class="far fa-comment-dots"></i>
+                                </div>
+                                <div class="article-actions__item">
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
+                                <div class="article-actions__item">
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer f9t-layout ">
+                <div class="layout footer__inner">
+                    <div class="footer__body">
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Giới thiệu</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Kteam Anime</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Content Writer</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">
+                            <p>
+                                Copyright © 2020-2021 F9Team All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rocket" class="rocket ">
+                <div class="rocket__rocket">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/silder3d/js/Carousel.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
