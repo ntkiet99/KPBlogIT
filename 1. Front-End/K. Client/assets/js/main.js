@@ -98,18 +98,19 @@
         // author fixed
         // window.onscroll = function () { fixedAuthorToTop() };
         function fixedAuthorToTop(){
-            console.log('run');
             var author_fixed = document.getElementById("article-page-author--fixed");
             // debugger;
-            var fixed =author_fixed.offsetTop - 40;
-            if(window.pageYOffset >= fixed){
-                if (author_fixed != null)
-                    author_fixed.classList.add("article-page-author--fixed");
-            }else{
-                if (author_fixed != null)
-                    author_fixed.classList.remove("article-page-author--fixed");
+            if(author_fixed != null){
+                var fixed =author_fixed.offsetTop - 40;
+                if(window.pageYOffset >= fixed){
+                    if (author_fixed != null)
+                        author_fixed.classList.add("article-page-author--fixed");
+                }else{
+                    if (author_fixed != null)
+                        author_fixed.classList.remove("article-page-author--fixed");
+                }
             }
-            
+            return;     
         }
         // fixtop home-list
         window.onscroll = function () { fixedHomeListToTop(),fixedAuthorToTop()  };
@@ -249,9 +250,48 @@
             $(location).attr('href', url);
         });
 
-        $(document).on('click','.article-card', function(){
-            var url = '/detailPost.html';
-            $(location).attr('href', url);
+        // $(document).on('click','.article-card', function(){
+        //     var url = '/detailPost.html';
+        //     $(location).attr('href', url);
+        // });
+
+        // swipper
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            }
+        });
+
+        // tinymce
+        tinymce.init({
+            selector: 'textarea',
+            width: "100%",
+            height: "200px",
+            entity_encoding: "raw",
+            menubar: false,
+
+            relative_urls: false,
+            inline_styles: true, image_advtab: true,
+            branding: false,
+
+            plugins: [
+                'image',
+                'wordcount'
+            ],
+            toolbar: 'image'
+
         });
     });
 

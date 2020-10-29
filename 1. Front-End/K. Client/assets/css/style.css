@@ -2758,3 +2758,25 @@ loading
   animation: fade-in 0.3s both;
   -webkit-animation: fade-in 0.3s both;
 }
+
+.article-page-hot-post .topic-card{
+  margin-top: 0 !important;
+}
+
+.article-page-hot-post .topic-card .topic-card__link{
+  /* width: 40px; */
+}
+
+.article-page-hot-post .topic-card .topic-card__link .topic-card__cover{
+  display: flex; align-items: center;
+  width: auto;
+}
+
+.article-page-hot-post .topic-card .topic-card__link .topic-card__cover img{ 
+  width: auto; height: 20px;
+}
+
+/* light gallary */
+.lg-outer .lg-thumb {
+  margin: 0 auto;
+}
