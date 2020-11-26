@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+        /* height: 100%; */
+    /* width: 100%; */
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 100px;
+    color: #333;
+    font-family: Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+   
+}
+
+#root{
+    background: url("/assets/img/c0e9f5b.png") no-repeat 0 62px;
+    width: 100%;
+    height: 100vh;
+    min-width: 1300px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: #f8f8f8;
+    position: relative;
+    font-size: .14rem;
+   
+}
+
+.single-page-container-content{
+    width: 9rem;
+    margin: auto;
+    padding-top: .9rem;
+    line-height: .46rem;
+}
+
+.single-page-header{
+    font-size: 0;
+}
+
+.single-page-header .logo-container{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.single-page-header .logo{
+    height: .46rem;
+    vertical-align: top;
+}
+
+.single-page-header .title-text{
+    font-size: .24rem;
+    vertical-align: top;
+    margin-left: .2rem;
+    color: #4ea4dc;
+}
+
+.language-container{
+    font-size: .14rem;
+    float: right;
+    color: #737373;
+}
+
+.back-to-login{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: .2rem;
+    color: #4ea4dc;
+    padding-left: .2rem;
+    cursor: pointer;
+}
+
+.register-form-container{
+    margin-top: .3rem;
+    background-color: #fff;
+    border-radius: .04rem;
+    overflow: hidden;
+}
+
+.register-header{
+    text-align: center;
+    font-size: .2rem;
+    line-height: .6rem;
+    color: #a6a6a6;
+    background-color: #f0f0f0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.register-header .tab-item{
+    flex: 1;
+    cursor: pointer;
+}
+
+.register-header .item-active{
+    background-color: #4ea4dc;
+    color: #fff;
+}
+
+
+.form-content{
+    width: 4.6rem;
+    margin: auto;
+    padding: .2rem 0 .4rem;
+    line-height: 1.5;
+}
+
+.form-input{
+    padding-top: .2rem;
+    position: relative;
+    line-height: .48rem;
+}
+
+.input-item{
+    margin-bottom: .1rem;
+}
+
+.input-container{
+    display: flex;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: .04rem;
+}
+
+.input-container input{
+    font-size: .14rem;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: none;
+    z-index: 2;
+    width: 100%;
+    color: #333;
+    padding: .12rem .2rem;
+    background-color: transparent;
+    font-size: .14rem;
+    border-radius: .04rem;
+    line-height: .22rem;
+}
+
+input{
+    outline: none;
+}
+
+input:focus{
+    border: 1px solid #4ea4dc;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+}
+
+.input-item .error-text{
+    color: #ff667f;
+    font-size: .12rem;
+    line-height: .12rem;
+    padding: .1rem 0 0;
+}
+
+.login-btn{
+    margin-top: .4rem;
+    text-align: center;
+}
+
+.default-btn{
+    display: inline-block;
+    border: 1px solid #4ea4dc;
+    width: 100%;
+    line-height: .56rem;
+    background-color: #4ea4dc;
+    border-radius: .04rem;
+    color: #fff;
+    font-size: .16rem;
+}
+
+.lg-btn{
+    line-height: .46rem;
+    font-size: .2rem;
+
+}
+
+.page-footer{
+    margin-top: .8rem;
+    font-size: .12rem;
+    text-align: center;
+    padding-bottom: .4rem;
+}
+
+.footer-link{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #a6a6a6;
+}
+
+.footer-link li:first-child {
+    border-left: none;
+}
+
+.footer-link li{
+    padding: 0 .2rem;
+    line-height: .1rem;
+    border-left: 1px solid #d8d8d8;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #4ea4dc;
+}
+
+.footer-link li .mhy-link {
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.copy-right {
+    margin-top: .15rem;
+    color: #ccc;
+}
+
+.register-bar{
+    font-size: .14rem;
+    line-height: .36rem;
+    margin-top: .1rem;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon 9 Team - F9Team</title>
+    <link rel="stylesheet" href="vendors/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendors/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" href="vendors/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<style>
+   
+</style>
+
+<body>
+    <div id="__layout">
+        <div class="root">
+            <div class="header">
+                <div class="f9t-layout header__inner">
+                    <div class="header__main">
+                        <div class="header__logo">
+                            <img src="assets/img/logo.png" alt="This is logo for Falcon 9 Team" />
+                        </div>
+                        <div class="header__title">F9Team · Forum</div>
+                        <div class="header__navwrap">
+                            <div class="header__nav">
+                                <a href="#" class="header__navitem header__navitemactive ">Trang chủ</a>
+                                <a href="#" class="header__navitem">F9Team</a>
+                                <a href="#" class="header__navitem">Bài viết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <form class="header__search" action="">
+                            <input type="text" />
+                            <i class="fas fa-search"></i>
+                        </form>
+                        <div class="header__notifycontainer">
+                            <div class="header__notify">Thông báo</div>
+                            <div class="header__notification--show header__shadow--custom header__notification--active"
+                                style="display: none">
+                                <div class="f9t-tab">
+                                    <ul class="tab__list">
+                                        <li class="tab__item tab__item--active">
+                                            <span class="tab__label"> Tin nhắn</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Hệ thống</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Thích</span>
+                                        </li>
+                                        <li class="tab__item">
+                                            <span class="tab__label"> Theo dõi</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__notifylist">
+                                    <div class="header__notify--loding" style="display: block">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <div class="header-notification">
+                                        <!-- <div class="no-data no-data-lg">
+                                            <img src="/assets/img/3dfa90b.png" alt="image no data"
+                                                class="no-data__image">
+                                            <p class="no-data__text">Chưa có ai thích nội dung của bạn!</p>
+                                        </div> -->
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+
+                                        <div class="header-notification__item pointer">
+                                            <div class="avatar avatar__sm">
+                                                <img class="avatar__img" src="assets/img/avatarDefaultPc.png"
+                                                    alt="avatar__img" />
+                                            </div>
+                                            <div class="header-notification__content">
+                                                <div class="header-notification__title">
+                                                    <a href="javascript:void(0)" class="account-title" target="_blank">
+                                                        <span class="account-title__name">Nguyễn Kiệt</span>
+                                                    </a>
+                                                </div>
+                                                <div class="header-notification__subtitle">
+                                                    trả lời bài viết
+                                                </div>
+                                                <div class="header-notification__text ellipsis">
+                                                    Hướng dẫn học c# cơ bản,..nenenenenen
+                                                </div>
+                                            </div>
+                                            <div class="header-notification__time">Vừa rồi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__notifyfooter">
+                                    <span>Đánh dấu tất cả đã đọc</span>
+                                    <a href="javascript:void(0)" target="_blank">Xem tất cả></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__avatarcontainer" style="z-index: 100">
+                            <div class="header__avatarwrp">
+                                <div class="header__avatar">
+                                    <img class="header__avatar--img" src="assets/img/avatarDefaultPc.png"
+                                        alt="avatar default pc" />
+                                </div>
+                            </div>
+                            <ul class="header__navitem--show header__navitem--account header__shadow--custom">
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Thông tin</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="header__navmore" target="_blank">Website</a>
+                                </li>
+                                <li style="border-top: 1px solid rgba(109, 107, 107, 0.3)">
+                                    <a style="color: rgba(85, 85, 85, 0.5)" href="javascript:void(0)"
+                                        class="header__navmore header__logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="f9t-select header__lang">
+                            <span class="f9t-select__label">
+                                <i class="fas fa-globe-europe"></i>
+                            </span>
+                            <span class="f9t-select__label">VN</span>
+                            <i class="fas fa-chevron-down f9t-select__icon icon-pcdown"></i>
+                            <!-- Multi Languages -->
+                            <div class="f9t-select__menu header__shadow--custom">
+                                <ul>
+                                    <li class="select__active">
+                                        <a href="javascript:void(0)">Việt Nam</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"> English </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="root-page-container">
+                <div class="main-page">
+                    <div class="home">
+                        <div class="layout-account">
+                            <div class="account-center-header">
+                                <div class="account-center-header__avatar">
+                                    <img src="/assets/img/avatar.png" alt="">
+                                </div>
+                                <div class="account-center-user">
+                                    <div class="account-center-user__title">
+                                        <span class="account-center-user__name">SkyNet</span>
+                                        <img class="account-center-user__level" src="/assets/img/level/level7.png" alt="">
+                                        <span class="account-center-user__uid">User ID: 89399151</span>
+                                    </div>
+                                    <div class="account-center-user__intro">
+                                        <span>
+                                            <i style="color: orange; margin-right: 8px; font-size: 14px;" class="far fa-file-alt"></i>
+                                            Cảm nghỉ:
+                                        </span>
+                                        <p>Evanscoding 228</p>
+                                    </div>
+                                    <div class="account-center-header__buttons">
+                                        <div class="account-center-header_edit">
+                                            <button class="button_button">Chỉnh sửa</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-center-user-header__data">
+                                    <div class="account-center-user-header__data-item">
+                                        <a href="" class="account-center-header__data-num">0</a>
+                                        <div class="account-center-header__data-label">Followers</div>
+                                    </div>
+                                    <div class="account-center-user-header__data-item">
+                                        <a href="" class="account-center-header__data-num">0</a>
+                                        <div class="account-center-header__data-label">Followers</div>
+                                    </div>
+                                    <div class="account-center-user-header__data-item">
+                                        <a href="" class="account-center-header__data-num">0</a>
+                                        <div class="account-center-header__data-label">Followers</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-site__menu">
+                                <header class="account-site-menu__header">Tài khoản</header>
+                                <ul class="account-site-menu__list">
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item ">
+                                            <i class="fas fa-list-alt"></i>
+                                            <span>Bài viết</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item nuxt-link-active">
+                                            <i class="fas fa-comment-dots"></i>
+                                            <span>Bình luận</span>
+                                        </a>
+                                    </li>
+                                    <li style="border-bottom: 1px solid #f0f0f0;">
+                                        <a href="javascript:void(0)" class="account-site-menu-item ">
+                                            <i class="fas fa-star"></i>
+                                            <span>Yêu thích</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item">
+                                            <i class="fab fa-gratipay"></i>
+                                            <span>Theo dõi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item">
+                                            <i class="fas fa-heart"></i>
+                                            <span>Đang theo dõi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item">
+                                            <i class="fas fa-user-edit"></i>
+                                            <span>Thông tin cá nhân</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="account-site-menu-item">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="account-center-content">
+                                <div class="account-center-content-container">
+                                    <div class="account-center__subheader">Bình luận</div>
+                                    <div class="account-center-no-data" style="display: none;">
+                                        <img class="account-center-no-data__img" src="/assets/img/3dfa90b.png" alt="">
+                                        <p class="no-data__text">Không có nội dung!</p>
+                                    </div>
+
+                                    <div class="account-center-content-container__list">
+                                        <div class="account-center-post-card-reply">
+                                            <div class="account-center-time">
+                                                <i class="far fa-clock"></i>
+                                                <span class="account-center-time__small">Just now</span>
+                                            </div>
+                                            <div class="account-center-reply-card">
+                                                <div class="account-center-reply-card__content">
+                                                    Oh I understand, I did a quick research and I think I’ll wait for a good cryo support so I can trigger superconduct and swirl damge better _(Celebration)
+                                                </div>
+                                                <div class="account-center-reply-card__origin">
+                                                    <p class="account-center-reply-card__title">
+                                                        Reply to comment: My main dps is Keqing, and IMO combo with her and Chongyun works great. But that depends on domains/WE/etc ur planning to use elec+ice combo
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="account-center-post-card-reply">
+                                            <div class="account-center-time">
+                                                <i class="far fa-clock"></i>
+                                                <span class="account-center-time__small">Just now</span>
+                                            </div>
+                                            <div class="account-center-reply-card">
+                                                <div class="account-center-reply-card__content">
+                                                    Oh I understand, I did a quick research and I think I’ll wait for a good cryo support so I can trigger superconduct and swirl damge better _(Celebration)
+                                                </div>
+                                                <div class="account-center-reply-card__origin">
+                                                    <p class="account-center-reply-card__title">
+                                                        Reply to comment: My main dps is Keqing, and IMO combo with her and Chongyun works great. But that depends on domains/WE/etc ur planning to use elec+ice combo
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="account-center-post-card-reply">
+                                            <div class="account-center-time">
+                                                <i class="far fa-clock"></i>
+                                                <span class="account-center-time__small">Just now</span>
+                                            </div>
+                                            <div class="account-center-reply-card">
+                                                <div class="account-center-reply-card__content">
+                                                    Oh I understand, I did a quick research and I think I’ll wait for a good cryo support so I can trigger superconduct and swirl damge better _(Celebration)
+                                                </div>
+                                                <div class="account-center-reply-card__origin">
+                                                    <p class="account-center-reply-card__title">
+                                                        Reply to comment: My main dps is Keqing, and IMO combo with her and Chongyun works great. But that depends on domains/WE/etc ur planning to use elec+ice combo
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="home-list__footer">
+                                        <div class="home-list__footer__loadmore">
+                                            <div class="button-loadmore">
+                                                <div class="button__button">Xem thêm</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="footer f9t-layout ">
+                <div class="layout footer__inner">
+                    <div class="footer__body">
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Giới thiệu</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Kteam Anime</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Content Writer</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__itemtitle">Liên hệ</div>
+                            <div class="footer__itemcontent">
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Email: f9team.it@gmail.com</a>
+                                </p>
+                                <p class="footer__itemtext">
+                                    <a href="javascript:void(0)" target="_blank">Fanpage: f9team.it</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">
+                            <p>
+                                Copyright © 2020-2021 F9Team All Rights Reserved
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rocket" class="rocket ">
+                <div class="rocket__rocket">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="vendors/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/silder3d/js/Carousel.js"></script>
+
+    <script type="text/javascript" src="vendors/lightGallery/js/lightgallery.min.js"></script>
+    <script type="text/javascript" src="vendors/lightGallery/js/lg-thumbnail.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".aniimated-thumbnials").lightGallery({
+                thumbnail:true,
+            }); 
+        });
+    </script>
+</body>
+
+</html>

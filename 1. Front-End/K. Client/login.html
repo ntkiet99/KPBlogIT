@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login-register.css">
+</head>
+<body>
+    <div id="root">
+        <div class="page-register single-page-container-content">
+            <div class="single-page-header">
+                <div class="logo-container">
+                    <img src="/assets/img/miHoYo_Logo.7f1ebd11.png" class="logo" alt="">
+                    <span class="title-text">Tài khoản</span>
+                </div>
+                <div class="language-container">
+                    <div class="back-to-login">
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="register-form-container">
+                <div class="register-header">
+                    <div class="tab-item item-active">Đăng nhập bằng Email</div>
+                </div>
+                <form action="" class="form-content">
+                    <div class="form-input input-item">
+                        <div class="input-container">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <p class="error-text">Emal không được để rỗng!</p>
+                    </div>
+                    <div class="form-input input-item">
+                        <div class="input-container">
+                            <input type="password" placeholder="Mật khẩu">
+                        </div>
+                        <p class="error-text">Mật khẩu không được rỗng!</p>
+                    </div>
+                   
+                    <div class="login-btn">
+                        <button type="submit" class="default-btn lg-btn">Đăng nhập</button>
+                    </div>
+
+                    <div class="register-bar">
+                        <a href="javascript:void(0)" class="bar-link">Đang có vấn đề?</a>
+                        <a href="javascript:void(0)" class="bar-link back-to-register">Đăng ký</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="page-footer">
+            <ul class="footer-link">
+                <li>
+                    <a href="javascript:void(0)" class="mhy-link">Terms of Service</a>
+                </li> 
+                <li>
+                    <a href="javascript:void(0)" class="mhy-link">Privacy Policy</a>
+                </li> 
+                <li>
+                    <a href="javascript:void(0)" class="mhy-link">FAQ</a>
+                </li> 
+                <li>
+                    <a href="javascript:void(0)" class="mhy-link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="copy-right">Copyright © 2012-2020 KietPhoi Co., Ltd. All Rights Reserved.</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vendors/jquery-3.5.1.min.js"></script>
+    <script>
+        $('.back-to-register').click(function (){
+            window.location.href = "/register.html";
+        })
+    </script>
+</body>
+</html>

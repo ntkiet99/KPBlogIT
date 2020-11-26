@@ -24,7 +24,14 @@
             }
         });
 
-
+        $('.account-site-menu-item').click(function(){
+            if($('.account-site-menu__list .account-site-menu-item').hasClass('nuxt-link-active')){
+                $('.account-site-menu__list .account-site-menu-item').removeClass('nuxt-link-active');
+                $(this).addClass('nuxt-link-active');
+            }else{
+                $(this).addClass('nuxt-link-active');
+            }
+        })
 
         $(document).mouseup(function (e) {
             var container = $(".header__lang");
@@ -182,7 +189,11 @@
                 $(this).parent().css('border-color', '#ebebeb');
             }
         });
-
+        $("#account-user-feel").attr("maxlength", 100);
+        $('#account-user-feel').on('input', function (e) {
+            var count = $(this).val().length;
+            $('.account-input__maxtip').text(count + '/100');
+        });
         $("#title-text").attr("maxlength", 100);
         $('#title-text').on('input', function (e) {
             var count = $(this).val().length;
